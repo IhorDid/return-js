@@ -1,94 +1,107 @@
-body {
-   background-color: black;
-   color: white;
-   font-family: Arial, sans-serif;
-   margin: 0;
-}
 
 .benefits {
-   display: flex;
-   justify-content: space-between;
-   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .benefits-title {
-   text-align: center;
-   width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .benefits-list {
-   width: 100%;
-   max-width: 800px;
+  width: 100%;
+  max-width: 1440px;
 }
 
 ul {
-   list-style-type: none;
-   padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .benefits-item {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 20px;
-   background: #242527;
-   border-radius: 20px;
-   padding: 24px;
-   width: calc(100% /2 );
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 64px;
+  background: #242527;
+  border-radius: 20px;
+  padding: 24px;
 }
 
-.benefits-item img {
+/* .benefits-item img {
    width: 40px;
    height: 40px;
    margin-right: 10px;
-}
+} */
+.icon {
+  width: 10px;
+  height: 10px;
+  fill: #ed3b44;
+} /* Заповнення іконки кольором */
 
 .benefits-item h3 {
-   margin: 0;
-   font-size: 20px;
+  margin: 0;
+  font-size: 20px;
 }
 
 .benefits-item p {
-   margin: 0;
+  margin: 0;
 }
 
 .order-btn {
-   border: 1px solid rgba(250, 250, 250, 0.2);
-   border-radius: 60px;
-   padding: 18px 36px;
-   width: 187px;
-   height: 55px;
-   background: black;
-   color: white;
-   margin-top: 20px;
-   cursor: pointer;
- 
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px 36px;
+  width: 187px;
+  height: 55px;
+  background: currentColor#1c1d20;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .order-btn:hover {
-   background-color: #ed3b44;
+  background-color: #ed3b44;
+
 }
 
 /* Media Queries */
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-   .container {
-      padding: 40px;
-   }
 
-   .benefits-item {
-      width: calc(50% - 20px);
-   }
+  .container {
+    padding: 40px;
+  }
+
+  .benefits-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: #242527;
+    border-radius: 20px;
+    padding: 24px;
+    width: calc(100% / 2);
+    width: calc(50% - 20px);
+  }
+
 }
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
-   .container {
-      padding: 60px;
-   }
 
-   .benefits-item {
-      width: calc(33.33% - 20px);
-   }
+  .container {
+    padding: 60px;
+  }
+
+  .benefits-item {
+    width: calc(33.33% - 20px);
+  }
 }
+  
+}
+
