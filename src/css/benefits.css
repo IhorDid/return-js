@@ -1,3 +1,4 @@
+
 .benefits {
   display: flex;
   justify-content: space-between;
@@ -64,12 +65,14 @@ ul {
 
 .order-btn:hover {
   background-color: #ed3b44;
+
 }
 
 /* Media Queries */
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
+
   .container {
     padding: 40px;
   }
@@ -85,10 +88,12 @@ ul {
     width: calc(100% / 2);
     width: calc(50% - 20px);
   }
+
 }
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
+
   .container {
     padding: 60px;
   }
@@ -97,3 +102,6 @@ ul {
     width: calc(33.33% - 20px);
   }
 }
+  
+}
+
