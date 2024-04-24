@@ -5,36 +5,47 @@
       <div class="swiper-wrapper">
         <!-- Repeat this block for the skin project -->
         <div class="swiper-slide project">
-          <div class="project-content">
+          <div class="content">
             <ul class="project-skills">
-              <li class="project-skill">#react</li>
-              <li class="project-skill">#js</li>
-              <li class="project-skill">#node js</li>
-              <li class="project-skill">#git</li>
+              <li class="project-item-reat">
+                <p class="project-list-program">#react</p>
+              </li>
+              <li class="project-item-js">
+                <p class="project-list-program">#js</p>
+              </li>
+              <li class="project-item-node">
+                <p class="project-list-program">#node js</p>
+              </li>
+              <li class="project-item-git">
+                <p class="project-list-program">#git</p>
+              </li>
             </ul>
             <h3 class="project-title">
               Programming Across Borders: Ideas, Technologies, Innovations
             </h3>
-            <div class="projects-img-wrapper">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ../img/projects/project-1_desk@1x.jpg 1x,
-                    ../img/projects/project-1_desk@2x.jpg 2x
-                  "
-                />
+            <a class="project-link" href="https://github.com/IhorDid/return-js"
+              >See project</a
+            >
+          </div>
+          <div class="projects-img-wrapper">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ../img/projects/project-1_desk@1x.jpg 1x,
+                  ../img/projects/project-1_desk@2x.jpg 2x
+                "
+              />
 
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    ../img/projects/project-1_mob@1x.jpg 1x,
-                    ../img/projects/project-1_mob@2x.jpg 2x
-                  "
-                />
-                <img src="../img/projects/project-1_desk@1x.jpg" alt="" />
-              </picture>
-            </div>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ../img/projects/project-1_mob@1x.jpg 1x,
+                  ../img/projects/project-1_mob@2x.jpg 2x
+                "
+              />
+              <img src="../img/projects/project-1_desk@1x.jpg" alt="" />
+            </picture>
             <div class="projects-img-wrapper">
               <picture>
                 <source
@@ -61,7 +72,7 @@
                   media="(min-width: 768px)"
                   srcset="
                     ../img/projects/project-3_desk@1x-1.jpg 1x,
-                    ../img/projects/project-3_desk@2x-2.jpg 2x
+                    ../img/projects/project-3_desk@2x-1.jpg 2x
                   "
                 />
 
@@ -69,36 +80,20 @@
                   media="(max-width: 767px)"
                   srcset="
                     ../img/projects/project-3_mob@1x-1.jpg 1x,
-                    ../img/projects/project-3_mob@2x-2.jpg 2x
+                    ../img/projects/project-3_mob@2x-1.jpg 2x
                   "
                 />
                 <img src="../img/projects/project-3_desk@1x-1.jpg" alt="" />
               </picture>
             </div>
           </div>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/IhorDid/return-js"
-              >See project</a
-            >
-          </div>
+          <div class="project-button"></div>
         </div>
         <!-- End of project block -->
       </div>
       <!-- Additional code for swipe navigation -->
       <div class="swiper-button-next">
-        <button class="project-next-btn" type="button">
-          <svg
-            class="projects-arrow-right-icon"
-            width="24"
-            height="24"
-            aria-label="arrow right"
-          >
-            <use href="../img/sprite.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="swiper-button-prev">
-        <button class="project-next-btn" type="button">
+        <button class="project-next-btn swiper-button-next" type="button">
           <svg
             class="projects-arrow-left-icon"
             width="24"
@@ -108,6 +103,19 @@
             <use href="../img/sprite.svg#icon-arrow-left"></use>
           </svg>
         </button>
+
+        <div class="swiper-button-prev">
+          <button class="project-next-btn swiper-button-prev" type="button">
+            <svg
+              class="projects-arrow-right-icon"
+              width="24"
+              height="24"
+              aria-label="arrow right"
+            >
+              <use href="../img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
