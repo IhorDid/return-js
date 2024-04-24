@@ -12,7 +12,7 @@
     />
     
     <script type="module" crossorigin src="/return-js/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/return-js/assets/index-9d17d0bf.css">
+    <link rel="stylesheet" href="/return-js/assets/index-2fd13fce.css">
   </head>
   <body>
     <!-- Олег -->
@@ -315,14 +315,17 @@
     <!-- Камила -->
     <footer class="footer" id="work-together">
   <div class="container">
-    <h2 class="footer-title">
+    <div class="footer-wrapper">
       <img
         class="footer-img"
         src="../img/header/logo.png"
         alt="photo of websites owner"
       />
-      Let’s <span class="accent">work</span> together
-    </h2>
+      <h2 class="footer-title">
+        Let’s <span class="accent">work</span> <br />together
+      </h2>
+    </div>
+
     <form class="footer-form">
       <input
         class="footer-input footer-input-email"
@@ -331,6 +334,8 @@
         pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         placeholder="clients@gmail.com"
       />
+      <p class="email-valid email-validation">Success!</p>
+      <p class="email-invalid email-validation">Invalid email, try again</p>
       <input
         class="footer-input footer-input-tel"
         type="text"
