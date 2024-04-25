@@ -1,0 +1,74 @@
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+   
+  }
+  .covers-container {
+    position: relative;
+  }
+  .covers-h {
+      display: none;
+  }
+.content-covers {
+  /* padding: 32px 16px;*/
+    position: absolute;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
+    font-family: "Pridi", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
+   
+}
+
+ /* @media only screen and (min-width: 768px) {
+    .content-covers  {
+        padding: 48px 32px; 
+   }
+ }
+ @media only screen and (min-width: 1158px) {
+    .content-covers {
+       
+         padding: 82px 32px;
+   }
+ }  */ 
+
+
+  .marquee__inner {
+    height: 100vh;
+     display: flex;
+     transform: rotate(16deg);
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: space-between;
+     align-content: space-around;
+  }
+  .marquee__line {
+    flex-shrink: 0;
+    margin-right: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: calc(100% / 2);
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 8s;
+   animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+   
+  }
+  @keyframes marqueeLine {
+    from {
+       
+      transform: translateX(-20%);
+    }
+    
+    to {
+       
+      transform: translateX(-180%);
+    }
+  }
