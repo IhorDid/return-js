@@ -1,4 +1,4 @@
-import { openModal, closeModal } from './js/header.js';
+import { openModal, closeModal, toggleMenuHead } from './js/header.js';
 import './js/hero.js';
 import './js/abouts.js';
 import './js/benefits.js';
@@ -7,9 +7,6 @@ import './js/questions.js';
 import './js/covers.js';
 import './js/reviews.js';
 import './js/work-together.js';
-// header no scrol function
-
-//function open burger
 
 (() => {
   const refs = {
@@ -26,3 +23,6 @@ import './js/work-together.js';
     document.body.classList.toggle('no-scroll');
   }
 })();
+
+// header menu function
+toggleMenuHead();

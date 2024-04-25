@@ -1,8 +1,5 @@
 /* General styles */
 
-#header {
-  padding-top: 32px;
-}
 .no-scroll {
   /* Styles for disabling scrolling */
   overflow: hidden;
@@ -38,10 +35,6 @@
 .header-name li:last-child svg {
   /* Styles for the last child SVG in header name */
   vertical-align: top;
-}
-
-.symbol-header svg {
-  /* Styles for symbols */
 }
 
 /* Modal window styles */
@@ -95,12 +88,13 @@
   border-bottom: 1px solid #fafafa;
 }
 
-.menu {
-  /* Styles for menu */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+.modal-menu-item {
+  border-bottom: 1px solid #fafafa;
+  transition: color 0.3s;
+}
+
+.modal-menu-item:hover {
+  color: #ed3b44;
 }
 
 .modal-order-btn {
@@ -118,6 +112,98 @@
   background-color: #e0373f;
 }
 
-.menu-item {
+.portfolio-header {
+  width: 1440px;
+  height: 900px;
+  background-image: url(/img/Hero.png);
+}
+
+.header-wrrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* tablet menu */
+.modal-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.head-nav-menu {
+  height: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 7px;
+}
+
+.header-btn {
+  display: none;
+  background: #ed3b44;
+  border-radius: 60px;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+  background-color: #e0373f;
+}
+
+.nav-title-btn {
   border-bottom: 1px solid #fafafa;
+  transition: color 0.3s;
+}
+
+.nav-title-btn:hover {
+  color: #ed3b44;
+}
+
+/**------------madia-------------**/
+
+/**------------madia-786px------------**/
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .burger-btn-wrap {
+    display: none;
+  }
+  .header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .head-nav-menu {
+    display: flex;
+  }
+  .menu-item {
+    opacity: 0; /* Початкова прозорість 0 */
+    transition: opacity 0.5s ease;
+  }
+
+  .menu-item:hover {
+    color: #ed3b44;
+    transition: color 0.3s;
+  }
+
+  .menu-item.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
 }
