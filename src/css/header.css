@@ -1,0 +1,123 @@
+/* General styles */
+
+#header {
+  padding-top: 32px;
+}
+.no-scroll {
+  /* Styles for disabling scrolling */
+  overflow: hidden;
+}
+
+/* Header styles */
+.container {
+  /* Styles for container */
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-list-wrap {
+  /* Styles for header list wrapper */
+  display: flex;
+}
+
+.header-link {
+  /* Styles for header links */
+  margin-right: 8px;
+}
+
+.logo-img {
+  /* Styles for logo image */
+  border-radius: 18px;
+}
+
+.header-name {
+  /* Styles for header name */
+  display: flex;
+}
+
+.header-name li:last-child svg {
+  /* Styles for the last child SVG in header name */
+  vertical-align: top;
+}
+
+.symbol-header svg {
+  /* Styles for symbols */
+}
+
+/* Modal window styles */
+.modal-nav {
+  /* Styles for modal navigation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 270px;
+}
+
+.mobile-modal {
+  /* Styles for mobile modal */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/header/modal-bgr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  transform: translateX(100%);
+  transition: transform 350ms;
+  padding-bottom: 64px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 64px;
+}
+
+.mobile-modal.is-hidden {
+  /* Стилі для видимого модального вікна */
+  transform: translateX(0); /* Показати вікно з права на ліво */
+  right: 0; /* Змінено на 0, щоб позиціонувати елемент праворуч */
+}
+
+.modal-close-btn {
+  /* Styles for modal close button */
+  position: absolute;
+  top: 32px;
+  right: 16px;
+}
+
+.menu-title {
+  display: none;
+}
+
+.menu-item {
+  border-bottom: 1px solid #fafafa;
+}
+
+.menu {
+  /* Styles for menu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-order-btn {
+  /* Styles for modal order button */
+  background: #ed3b44;
+  border-radius: 60px;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.modal-order-btn:hover {
+  background-color: #e0373f;
+}
+
+.menu-item {
+  border-bottom: 1px solid #fafafa;
+}
