@@ -37,3 +37,30 @@ export function toggleMenuHead() {
     }
   });
 }
+
+
+
+
+// Возвращение
+
+
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('.head-btn'),
+    closeModalBtn: document.querySelector('.modal-close-btn'),
+    modal: document.querySelector('.mobile-modal'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
+  }
+})();
+
+// header menu function
+toggleMenuHead();
+
