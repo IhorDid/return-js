@@ -12,21 +12,25 @@
     </div>
 
     <form class="footer-form">
-      <input
-        class="footer-input footer-input-email"
-        type="email"
-        name="footer-input-email"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        placeholder="clients@gmail.com"
-      />
-      <p class="email-valid email-validation">Success!</p>
-      <p class="email-invalid email-validation">Invalid email, try again</p>
-      <input
-        class="footer-input footer-input-tel"
-        type="text"
-        name="footer-input-name"
-        placeholder="comments"
-      />
+      <div class="input-wrapper">
+        <input
+          class="footer-input footer-input-email"
+          type="email"
+          name="footer-input-email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="clients@gmail.com"
+        />
+        <p class="email-valid email-validation">Success!</p>
+        <p class="email-invalid email-validation">Invalid email, try again</p>
+      </div>
+      <div class="input-wrapper">
+        <input
+          class="footer-input footer-input-tel"
+          type="text"
+          name="footer-input-name"
+          placeholder="comments"
+        />
+      </div>
       <button class="footer-button" type="submit">Send</button>
     </form>
     <address class="footer-address">
@@ -45,3 +49,17 @@
     </address>
   </div>
 </footer>
+<div class="footer-modal is-hidden">
+  <div class="footer-modal-window">
+    <svg class="icon-close-modal" width="22" height="22">
+      <use href="../img/sprite.svg#icon-close-modal"></use>
+    </svg>
+    <p class="footer-modal-title">
+      Thank you for your interest in cooperation!
+    </p>
+    <p class="footer-modal-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</div>
