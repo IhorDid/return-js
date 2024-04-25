@@ -1,0 +1,139 @@
+.projects {
+}
+.container {
+}
+.projects-title {
+  color: rgba(250, 250, 250, 0.4);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  padding-bottom: 32px;
+}
+.swiper {
+}
+.mySwiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.project {
+}
+.content {
+  background-color: #fafafa;
+  padding: 32px;
+  border-radius: 24px 24px 0px 0px;
+}
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.project-item-reat {
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  width: 80px;
+  height: 45px;
+}
+
+.project-item-js {
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  width: 57px;
+  height: 45px;
+}
+
+.project-item-node {
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  width: 94px;
+  height: 45px;
+}
+
+.project-item-git {
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  width: 63px;
+  height: 45px;
+}
+
+.project-list-program {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #1c1d20;
+  white-space: nowrap;
+}
+
+.project-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  color: #1c1d20;
+  padding-top: 96px;
+  padding-bottom: 32px;
+}
+.projects-img-wrapper {
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
+  height: auto;
+  padding: 100px 16px;
+}
+.project-button {
+}
+.project-link {
+  border-radius: 60px;
+  padding: 13px 32px;
+  width: 141px;
+  height: 45px;
+  background-color: #ed3b44;
+  font-family: Inter Tight, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  display: inline-block;
+}
+
+.project-link:hover {
+  background-color: #e0373f;
+}
+
+.swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.project-next-btn {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects-arrow-right-icon {
+  stroke: #fafafa;
+}
+.swiper-button-prev {
+}
+.projects-arrow-left-icon {
+  stroke: #fafafa;
+}
+.swiper-pagination {
+}

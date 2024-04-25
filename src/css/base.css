@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-SemiBold.ttf');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-Medium.ttf');
+  font-weight: 500;
+  font-display: swap;
+}
+
+body {
+  background-color: #1c1d20;
+  color: #fafafa;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
