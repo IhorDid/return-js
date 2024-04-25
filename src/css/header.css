@@ -6,10 +6,10 @@
 }
 
 /* Header styles */
-.container {
+.head-cont {
   /* Styles for container */
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .head-list-wrap {

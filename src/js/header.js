@@ -6,8 +6,22 @@ export function openModal() {
 export function closeModal() {
   document.body.classList.remove('no-scroll');
 }
+export function headOpenModal() {
+  const refs = {
+    openModalBtn: document.querySelector('.head-btn'),
+    closeModalBtn: document.querySelector('.modal-close-btn'),
+    modal: document.querySelector('.mobile-modal'),
+  };
 
-// Отримуємо кнопку меню та елементи пунктів меню
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
+  }
+}
+
 export function toggleMenuHead() {
   const titleBtn = document.querySelector('.nav-title-btn');
   const menuItems = document.querySelectorAll('.menu-item');
@@ -37,3 +51,30 @@ export function toggleMenuHead() {
     }
   });
 }
+
+
+
+
+// Возвращение
+
+
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('.head-btn'),
+    closeModalBtn: document.querySelector('.modal-close-btn'),
+    modal: document.querySelector('.mobile-modal'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
+  }
+})();
+
+// header menu function
+toggleMenuHead();
+

@@ -1,12 +1,17 @@
 .benefits {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .benefits-title {
-  text-align: center;
-  width: 100%;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
+  line-height: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .benefits-list {
@@ -14,31 +19,56 @@
   max-width: 1440px;
 }
 
-ul {
+.benefits-ul {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 16px;
   list-style-type: none;
   padding: 0;
 }
 
 .benefits-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 64px;
   background: #242527;
   border-radius: 20px;
-  padding: 24px;
 }
+.benefits-item h3 {
+  padding-left: 24px;
+  padding-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.benefits-item p{
+  font-weight: 500;
+font-size: 16px;
 
-/* .benefits-item img {
-   width: 40px;
-   height: 40px;
-   margin-right: 10px;
-} */
-.icon {
-  width: 10px;
-  height: 10px;
-  fill: #ed3b44;
+line-height: 24px; 
+line-height: 1.5;
+letter-spacing: -0.02em;
+color: rgba(250, 250, 250, 0.6);
+}
+.benefits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  stroke-width: 1.5px;
+  stroke: white;
+  fill: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #ed3b44;
+  margin: 24px auto 64px 24px;
+
+  animation: rotateAnimation 5s infinite linear,
+    backgroundColorChange 5s infinite linear;
+  transform-origin: center;
+  transition: background-color 0.3s ease-in-out;
 } /* Заповнення іконки кольором */
 
 .benefits-item h3 {
@@ -74,25 +104,19 @@ ul {
     padding: 40px;
   }
 
-  .benefits-item {
+  .benefits-ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     background: #242527;
-    border-radius: 20px;
-    padding: 24px;
+
     width: calc(100% / 2);
-    width: calc(50% - 20px);
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
-  .container {
-    padding: 60px;
-  }
-
   .benefits-item {
     width: calc(33.33% - 20px);
   }
