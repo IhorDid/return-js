@@ -1,4 +1,4 @@
-.projects-title {
+.projects–title {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -114,13 +114,7 @@
 .projects-arrow-left-icon {
   stroke: #fafafa;
 }
-/* ---TABLET--- */
 @media screen and (min-width: 768px) {
-  /* .swiper {
-    max-width: 704px;
-    height: 1191px;
-  } */
-
   .projects-item {
     max-width: 704px;
   }
@@ -172,7 +166,7 @@
 }
 
 /* ---DESKTOP--- */
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .swiper-slide.projects-item {
     max-width: 1376px;
     display: flex;
