@@ -1,5 +1,3 @@
-/* General styles */
-
 .no-scroll {
   /* Styles for disabling scrolling */
   overflow: hidden;
@@ -7,39 +5,31 @@
 
 /* Header styles */
 .head-cont {
-  /* Styles for container */
-  /* display: flex;
-  justify-content: space-between; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .head-list-wrap {
-  /* Styles for header list wrapper */
   display: flex;
 }
 
 .header-link {
-  /* Styles for header links */
   margin-right: 8px;
 }
 
 .logo-img {
-  /* Styles for logo image */
   border-radius: 18px;
 }
 
 .header-name {
-  /* Styles for header name */
   display: flex;
 }
 
 .header-name li:last-child svg {
-  /* Styles for the last child SVG in header name */
   vertical-align: top;
 }
 
-/* Modal window styles */
 .modal-nav {
-  /* Styles for modal navigation */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +58,8 @@
 }
 
 .mobile-modal.is-hidden {
-  /* Стилі для видимого модального вікна */
-  transform: translateX(0); /* Показати вікно з права на ліво */
-  right: 0; /* Змінено на 0, щоб позиціонувати елемент праворуч */
+  transform: translateX(0);
+  right: 0;
 }
 
 .modal-close-btn {
@@ -190,7 +179,7 @@
     display: flex;
   }
   .menu-item {
-    opacity: 0; /* Початкова прозорість 0 */
+    opacity: 0;
     transition: opacity 0.5s ease;
   }
 
@@ -203,7 +192,8 @@
     display: block;
     opacity: 1;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .menu-title {
+    display: flex;
+  }
 }
