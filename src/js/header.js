@@ -1,34 +1,34 @@
-// header no scrol function
-export function openModal() {
+const variables = {
+  openModalBtn: document.querySelector('.head-btn'),
+  closeModalBtn: document.querySelector('.modal-close-btn'),
+  modal: document.querySelector('.mobile-modal'),
+  titleBtn: document.querySelector('.nav-title-btn'),
+  menuItems: document.querySelectorAll('.menu-item'),
+  modalLinks: document.querySelectorAll('.modal-menu-item a'),
+  closeButton: document.querySelector('.modal-close-btn'),
+};
+
+function openModal() {
   document.body.classList.add('no-scroll');
 }
 
-export function closeModal() {
+function closeModal() {
   document.body.classList.remove('no-scroll');
 }
-export function headOpenModal() {
-  const refs = {
-    openModalBtn: document.querySelector('.head-btn'),
-    closeModalBtn: document.querySelector('.modal-close-btn'),
-    modal: document.querySelector('.mobile-modal'),
-  };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+function headOpenModal() {
+  variables.openModalBtn.addEventListener('click', toggleModal);
+  variables.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    variables.modal.classList.toggle('is-hidden');
     document.body.classList.toggle('no-scroll');
   }
 }
 
-// Отримуємо кнопку меню та елементи пунктів меню
-export function toggleMenuHead() {
-  const titleBtn = document.querySelector('.nav-title-btn');
-  const menuItems = document.querySelectorAll('.menu-item');
-
-  titleBtn.addEventListener('click', function () {
-    const isVisible = menuItems[0].classList.contains('active');
+function toggleMenuHead() {
+  variables.titleBtn.addEventListener('click', function () {
+    const isVisible = variables.menuItems[0].classList.contains('active');
 
     if (isVisible) {
       hideMenuItems();
@@ -37,7 +37,6 @@ export function toggleMenuHead() {
     }
   });
 
-  // Close menu items when clicking elsewhere
   document.addEventListener('click', function (event) {
     const isTitleBtnClicked = event.target.closest('.nav-title-btn');
     if (!isTitleBtnClicked) {
@@ -46,18 +45,18 @@ export function toggleMenuHead() {
   });
 
   function hideMenuItems() {
-    menuItems.forEach(function (item, index) {
+    variables.menuItems.forEach(function (item, index) {
       setTimeout(() => {
         item.style.opacity = 0;
         setTimeout(() => {
           item.classList.remove('active');
         }, 500);
-      }, (menuItems.length - index) * 50);
+      }, (variables.menuItems.length - index) * 50);
     });
   }
 
   function showMenuItems() {
-    menuItems.forEach(function (item, index) {
+    variables.menuItems.forEach(function (item, index) {
       setTimeout(() => {
         item.style.opacity = 0;
         item.classList.add('active');
@@ -69,26 +68,20 @@ export function toggleMenuHead() {
   }
 }
 
-export function setupMobileModal() {
+function setupMobileModal() {
   document.addEventListener('DOMContentLoaded', function () {
-    const modalLinks = document.querySelectorAll('.modal-menu-item a');
-
-    const closeModal = () => {
-      const mobileModal = document.querySelector('.mobile-modal');
-      mobileModal.classList.add('is-hidden');
-
-      document.body.classList.remove('no-scroll');
-    };
-
-    modalLinks.forEach(link => {
+    variables.modalLinks.forEach(link => {
       link.addEventListener('click', event => {
         closeModal();
       });
     });
 
-    const closeButton = document.querySelector('.modal-close-btn');
-    closeButton.addEventListener('click', () => {
+    variables.closeButton.addEventListener('click', () => {
       closeModal();
     });
   });
 }
+
+toggleMenuHead();
+headOpenModal();
+setupMobileModal();
