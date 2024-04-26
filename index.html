@@ -12,8 +12,8 @@
     />
     
     <script type="module" crossorigin src="/return-js/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/return-js/assets/vendor-a79d2c34.js">
-    <link rel="stylesheet" href="/return-js/assets/vendor-3b6973c7.css">
+    <link rel="modulepreload" crossorigin href="/return-js/assets/vendor-0e5f7713.js">
+    <link rel="stylesheet" href="/return-js/assets/vendor-85ac13f3.css">
     <link rel="stylesheet" href="/return-js/assets/index-90ee052d.css">
   </head>
   <body>
@@ -900,7 +900,7 @@
         <input
           class="footer-input footer-input-email"
           type="email"
-          name="footer-input-email"
+          name="userEmail"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           placeholder="clients@gmail.com"
         />
@@ -911,7 +911,7 @@
         <input
           class="footer-input footer-input-tel"
           type="text"
-          name="footer-input-name"
+          name="comments"
           placeholder="comments"
         />
       </div>
@@ -935,9 +935,15 @@
 </footer>
 <div class="footer-modal is-hidden">
   <div class="footer-modal-window">
-    <svg class="icon-close-modal" width="22" height="22">
-      <use href="../img/sprite.svg#icon-close-modal"></use>
-    </svg>
+    <button
+      type="modal"
+      class="close-modal-button"
+      aria-label="button to close the message"
+    >
+      <svg class="icon-close-modal" width="22" height="22">
+        <use href="../img/sprite.svg#icon-close-modal"></use>
+      </svg>
+    </button>
     <p class="footer-modal-title">
       Thank you for your interest in cooperation!
     </p>
