@@ -1,9 +1,9 @@
 <section class="projects-section" id="projects">
   <div class="container">
-    <h2 class="projects-title">Projects</h2>
+    <h2 class="projects–title">Projects</h2>
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
+      <ul class="projects-list swiper-wrapper">
+        <li class="projects-item swiper-slide">
           <div class="projects-info-wrapper">
             <div class="projects-skills">
               <div class="projects-skill">
@@ -34,26 +34,27 @@
               <source
                 media="(min-width: 768px)"
                 srcset="
-                  ../img/projects/project-1_desk@1x.jpg 1x,
-                  ../img/projects/project-1_desk@2x.jpg 2x
+                  ./img/projects/project-1_desk@1x.jpg 1x,
+                  ./img/projects/project-1_desk@2x.jpg 2x
                 "
               />
               <source
                 media="(max-width: 767px)"
                 srcset="
-                  ../img/projects/project-1_mob@1x.jpg 1x,
-                  ../img/projects/project-1_mob@2x.jpg 2x
+                  ./img/projects/project-1_mob@1x.jpg 1x,
+                  ./img/projects/project-1_mob@2x.jpg 2x
                 "
               />
               <img
                 class="projects-img"
-                src="../img/projects/project-1_desk@1x.jpg"
+                src="./img/projects/project-1_desk@1x.jpg"
                 alt="project1"
+                loading="lazy"
               />
             </picture>
           </div>
-        </div>
-        <div class="swiper-slide">
+        </li>
+        <li class="projects-item swiper-slide">
           <div class="projects-info-wrapper">
             <div class="projects-skills">
               <div class="projects-skill">
@@ -84,26 +85,26 @@
               <source
                 media="(min-width: 768px)"
                 srcset="
-                  ../img/projects/project-2_desk@1x.jpg 1x,
-                  ../img/projects/project-2_desk@2x.jpg 2x
+                  ./img/projects/project-2_desk@1x.jpg 1x,
+                  ./img/projects/project-2_desk@2x.jpg 2x
                 "
               />
               <source
                 media="(max-width: 767px)"
                 srcset="
-                  ../img/projects/project-2_mob@1x.jpg 1x,
-                  ../img/projects/project-2_mob@2x.jpg 2x
+                  ./img/projects/project-2_mob@1x.jpg 1x,
+                  ./img/projects/project-2_mob@2x.jpg 2x
                 "
               />
               <img
                 class="projects-img"
-                src="../img/projects/project-2_desk@1x.jpg"
+                src="./img/projects/project-2_desk@1x.jpg"
                 alt="project2"
               />
             </picture>
           </div>
-        </div>
-        <div class="swiper-slide">
+        </li>
+        <li class="projects-item swiper-slide">
           <div class="projects-info-wrapper">
             <div class="projects-skills">
               <div class="projects-skill">
@@ -134,26 +135,27 @@
               <source
                 media="(min-width: 768px)"
                 srcset="
-                  ../img/projects/project-3_desk@1x-1.jpg 1x,
-                  ../img/projects/project-3_desk@2x-1.jpg 2x
+                  ./img/projects/project-3_desk@1x-1.jpg 1x,
+                  ./img/projects/project-3_desk@2x-1.jpg 2x
                 "
               />
               <source
                 media="(max-width: 767px)"
                 srcset="
-                  ../img/projects/project-3_mob@1x-1.jpg 1x,
-                  ../img/projects/project-3_mob@2x-1.jpg 2x
+                  ./img/projects/project-3_mob@1x-1.jpg 1x,
+                  ./img/projects/project-3_mob@2x-1.jpg 2x
                 "
               />
               <img
                 class="projects-img"
-                src="../img/projects/project-3_desk@1x-1.jpg"
+                src="./img/projects/project-3_desk@1x-1.jpg"
                 alt="project3"
+                loading="lazy"
               />
             </picture>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div class="projects-btn-container">
         <button class="projects-prev-btn" type="button">
           <svg
@@ -162,7 +164,7 @@
             height="24"
             aria-label="arrow left"
           >
-            <use href="../img/sprite.svg#icon-arrow-left"></use>
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
           </svg>
         </button>
         <button class="projects-next-btn" type="button">
@@ -172,7 +174,7 @@
             height="24"
             aria-label="arrow right"
           >
-            <use href="../img/sprite.svg#icon-arrow-right"></use>
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
           </svg>
         </button>
       </div>
