@@ -4,12 +4,10 @@
 }
 
 .benefits-title {
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
 
   line-height: 24px;
-  line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
@@ -31,12 +29,10 @@
 }
 
 .benefits-item {
-  font-family: "Inter Tight", sans-serif;
   background: #242527;
   border-radius: 20px;
 }
 .benefits-item h3 {
-  font-family: "Inter Tight", sans-serif;
   padding-left: 24px;
   padding-bottom: 16px;
   font-weight: 600;
@@ -44,15 +40,13 @@
   line-height: 30px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #fafafa;
 }
+
 .benefits-item p {
   font-weight: 500;
   font-size: 16px;
   padding: 0 24px 24px 24px;
-
   line-height: 24px;
-  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
@@ -92,7 +86,7 @@
   width: 187px;
   height: 55px;
   background: currentColor#1c1d20;
-  color: white;
+  color:  #fafafa;
   margin-top: 32px;
   cursor: pointer;
 }
@@ -123,7 +117,7 @@
     height: 270px;
     width: 50%;
   }
-  
+
   .order-btn-benefits {
     margin-top: 64px;
   }
@@ -131,7 +125,23 @@
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
-  .benefits-item {
-    width: calc(33.33% - 20px);
+  .benefits {
+   display: flex;
+   justify-content: space-between; /* Розмістити дочірні елементи відстань між ними */
+}
+
+.benefits-content {
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1; 
+   padding-left: 20px;
+}
+  
+  .benefits-title{
+    width: 284px;
+    margin-right: 200px;
   }
+  .btn-benefits {
+   margin-top: 0;
+}
 }
