@@ -9,7 +9,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
 
 import postUserInfo from './postApi';
-
+import iconSvg from '../img/x.svg';
 const footerForm = document.querySelector('.footer-form');
 footerForm.addEventListener('submit', submitFooterForm);
 
@@ -40,7 +40,7 @@ async function submitFooterForm(event) {
       aria-label="button to close the message"
     >
       <svg class="icon-close-modal" width="22" height="22">
-        <use href="../img/sprite.svg#icon-close-modal"></use>
+        <use href="${iconSvg}"></use>
       </svg>
     </button>
     <h2 class="footer-modal-title">
