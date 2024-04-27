@@ -3,6 +3,34 @@
   overflow: hidden;
 }
 
+.symbol-link {
+  transition: fill 0.2s;
+}
+
+.symbol-link:hover {
+  fill: #ed3b44;
+}
+
+.symbol-link svg {
+  transition: height 0.2s; /* Анімація зміни висоти */
+}
+
+.symbol-link:hover svg {
+  height: 15px; /* Нова висота при наведенні */
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.symbol-link {
+  fill: #fafafa;
+}
+
 /* Header styles */
 .head-cont {
   display: flex;
