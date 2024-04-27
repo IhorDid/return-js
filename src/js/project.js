@@ -3,7 +3,7 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper', {
+const reket = new Swiper('.myswiper', {
   slidesPerView: 1,
   spaceBetween: 800,
   keyboard: {
@@ -14,6 +14,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.projects-prev-btn',
   },
 });
+export { reket };
 // document.addEventListener('DOMContentLoaded', () => {
 //   try {
 //     const mySwiper = new Swiper('.mySwiper', {
