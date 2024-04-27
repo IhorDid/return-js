@@ -3,10 +3,7 @@
 }
 .benefits-wrapper {
   padding-top: 32px;
-<<<<<<< Updated upstream
   padding-bottom: 32px;
-=======
->>>>>>> Stashed changes
   margin: 0;
 }
 
@@ -162,11 +159,8 @@
     flex-wrap: wrap;
     gap: 16px;
     /* margin-bottom: 30px; */
-<<<<<<< Updated upstream
 
     position: relative;
-=======
->>>>>>> Stashed changes
   }
 
   .btn-benefits {
