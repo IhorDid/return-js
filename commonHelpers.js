@@ -3,7 +3,7 @@ import{A as f,S as m,N as p,a as v,i as d,b as g}from"./assets/vendor-5c32e6ac.j
         <img src="${t}" alt="${o}" class="review-card-foto" />
         <h3 class="review-card-name">${o}</h3>
         <p class="review-card-text">${n}</p>
-    </div>`).join("")),M.update()});const S=document.querySelector(".reviews-swiper"),M=new m(S,{modules:[p],slidesPerView:1,spaceBetween:16,keyboard:{enabled:!0,onlyInViewport:!1},breakpoints:{768:{slidesPerView:2,spaceBetween:18},1440:{slidesPerView:4,spaceBetween:16}},direction:"horizontal",navigation:{nextEl:".reviews-next-btn",prevEl:".reviews-prev-btn"}});async function I(e){return await v.post("https://portfolio-js.b.goit.study/api/requests",e)}const l=document.querySelector(".footer-form");l.addEventListener("submit",x);async function x(e){e.preventDefault();const{userEmail:o,comments:t}=e.currentTarget.elements;if(!o.value.trim()||!t.value.trim()){d.error({message:"Your query does not contain any letters!",position:"topRight"});return}const n={email:o.value,comment:t.value};try{const s=await I(n);console.log(s);const i=g.create(`
+    </div>`).join("")),M.update()});const S=document.querySelector(".reviews-swiper"),M=new m(S,{modules:[p],slidesPerView:1,spaceBetween:16,keyboard:{enabled:!0,onlyInViewport:!1},breakpoints:{768:{slidesPerView:2,spaceBetween:18},1440:{slidesPerView:4,spaceBetween:16}},direction:"horizontal",navigation:{nextEl:".reviews-next-btn",prevEl:".reviews-prev-btn"}});async function I(e){return await v.post("https://portfolio-js.b.goit.study/api/requests",e)}const x="/return-js/assets/x-ef85e298.svg",l=document.querySelector(".footer-form");l.addEventListener("submit",B);async function B(e){e.preventDefault();const{userEmail:o,comments:t}=e.currentTarget.elements;if(!o.value.trim()||!t.value.trim()){d.error({message:"Your query does not contain any letters!",position:"topRight"});return}const n={email:o.value,comment:t.value};try{const s=await I(n);console.log(s);const i=g.create(`
 <div class="footer-modal">
   <div class="footer-modal-window">
     <button
@@ -11,7 +11,7 @@ import{A as f,S as m,N as p,a as v,i as d,b as g}from"./assets/vendor-5c32e6ac.j
       aria-label="button to close the message"
     >
       <svg class="icon-close-modal" width="22" height="22">
-        <use href="../img/sprite.svg#icon-close-modal"></use>
+        <use href="${x}"></use>
       </svg>
     </button>
     <h2 class="footer-modal-title">
@@ -23,5 +23,5 @@ import{A as f,S as m,N as p,a as v,i as d,b as g}from"./assets/vendor-5c32e6ac.j
   </div>
 </div>
 
-`);i.show(),document.querySelector("body").classList.add("fix-scroll"),localStorage.removeItem(c),B(i.close),e.target.reset()}catch(s){d.error({message:s.message,position:"topRight"})}}function B(e){document.addEventListener("click",o),document.addEventListener("keydown",o);function o(t){(t.target.classList.contains("icon-close-modal")||t.target.classList.contains("footer-modal")||t.target.classList.contains("close-modal-button"))&&(e(),document.querySelector("body").classList.remove("fix-scroll")),t.key==="Escape"&&(e(),document.querySelector("body").classList.remove("fix-scroll"))}}const c="footer-form-state";localStorage.getItem(c)&&k();l.addEventListener("input",O);function O(e){const o=JSON.parse(localStorage.getItem(c))||{},t=e.target.value;o[e.target.name]=t.trim(),localStorage.setItem(c,JSON.stringify(o))}function k(){const e=JSON.parse(localStorage.getItem(c)),o=e.userEmail,t=e.comments,{userEmail:n,comments:s}=l.elements;n.value=o||"",s.value=t||""}
+`);i.show(),document.querySelector("body").classList.add("fix-scroll"),localStorage.removeItem(c),O(i.close),e.target.reset()}catch(s){d.error({message:s.message,position:"topRight"})}}function O(e){document.addEventListener("click",o),document.addEventListener("keydown",o);function o(t){(t.target.classList.contains("icon-close-modal")||t.target.classList.contains("footer-modal")||t.target.classList.contains("close-modal-button"))&&(e(),document.querySelector("body").classList.remove("fix-scroll")),t.key==="Escape"&&(e(),document.querySelector("body").classList.remove("fix-scroll"))}}const c="footer-form-state";localStorage.getItem(c)&&j();l.addEventListener("input",k);function k(e){const o=JSON.parse(localStorage.getItem(c))||{},t=e.target.value;o[e.target.name]=t.trim(),localStorage.setItem(c,JSON.stringify(o))}function j(){const e=JSON.parse(localStorage.getItem(c)),o=e.userEmail,t=e.comments,{userEmail:n,comments:s}=l.elements;n.value=o||"",s.value=t||""}
 //# sourceMappingURL=commonHelpers.js.map
