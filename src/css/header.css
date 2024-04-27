@@ -116,6 +116,9 @@
 
 .modal-order-btn {
   /* Styles for modal order button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #ed3b44;
   border-radius: 60px;
   padding: 14px 31px;
