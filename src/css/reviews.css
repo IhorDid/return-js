@@ -22,14 +22,6 @@
 }
 
 
-/*
-.swiper-wrapper {
-    /* Этот размер работает до ширины 768*/
-    /* Работает как контейнер для содержимогокарточки
-    
-}*/
-
-
 
 /* Это swiper-slide */
 .review-card {
@@ -76,8 +68,4 @@
         width: 704px;
         gap: 16px;
     } 
-}
-
-@media only screen and (min-width: 1440px) {
-
 }
