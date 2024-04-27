@@ -54,6 +54,7 @@ async function submitFooterForm(event) {
 
 `);
     instance.show();
+    document.querySelector('body').classList.add('fix-scroll');
     localStorage.removeItem(key);
     handleClosing(instance.close);
     event.target.reset();
@@ -75,9 +76,11 @@ function handleClosing(callback) {
       event.target.classList.contains('close-modal-button')
     ) {
       callback();
+      document.querySelector('body').classList.remove('fix-scroll');
     }
     if (event.key === 'Escape') {
       callback();
+      document.querySelector('body').classList.remove('fix-scroll');
     }
   }
 }
