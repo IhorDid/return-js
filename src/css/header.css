@@ -193,10 +193,6 @@
   color: #ed3b44;
 }
 
-/**------------madia-------------**/
-
-/**------------madia-786px------------**/
-
 @media screen and (min-width: 768px) {
   .burger-btn-wrap {
     display: none;
