@@ -7,6 +7,8 @@
 }
 
 .hero-title-box {
+    display: flex;
+    justify-content: flex-start;
     padding-top: 281px;
     padding-bottom: 212px;
     max-width: 343px;

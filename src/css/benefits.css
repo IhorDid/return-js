@@ -1,6 +1,7 @@
 .benefits {
   padding-top: 32px;
   padding-bottom: 32px;
+  margin: 0;
 }
 
 .benefits-title {
@@ -16,7 +17,6 @@
 
 .benefits-list {
   width: 100%;
-  max-width: 1440px;
 }
 
 .benefits-ul {
@@ -35,7 +35,6 @@
 .benefits-item h3 {
   padding-left: 24px;
   padding-bottom: 16px;
-  font-weight: 600;
   font-size: 20px;
   line-height: 30px;
   line-height: 1.5;
@@ -46,7 +45,7 @@
   font-weight: 500;
   font-size: 16px;
   padding: 0 24px 24px 24px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
@@ -86,7 +85,7 @@
   width: 187px;
   height: 55px;
   background: currentColor#1c1d20;
-  color:  #fafafa;
+  color: #fafafa;
   margin-top: 32px;
   cursor: pointer;
 }
@@ -103,7 +102,6 @@
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-
   .benefits-ul {
     display: flex;
     flex-wrap: wrap;
@@ -123,25 +121,41 @@
   }
 }
 
-/* Desktop */
+/* Desktop  */
 @media only screen and (min-width: 1440px) {
   .benefits {
-   display: flex;
-   justify-content: space-between; /* Розмістити дочірні елементи відстань між ними */
-}
-
-.benefits-content {
-   display: flex;
-   flex-direction: column;
-   flex-grow: 1; 
-   padding-left: 20px;
-}
-  
-  .benefits-title{
-    width: 284px;
-    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 62px;
   }
+
+  .benefits-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+
+  .benefits-title {
+    min-width: 284px;
+    margin-right: 350px;
+    padding-bottom: 0;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* margin-bottom: 30px; */
+
+    position: relative;
+  }
+
   .btn-benefits {
-   margin-top: 0;
-}
+    margin-top: 0;
+
+    position: absolute;
+    top: 160%;
+    left: 40%;
+  }
 }
