@@ -9,7 +9,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
 
 import postUserInfo from './postApi';
-import iconSvg from './img/x.svg';
+import iconSvg from '../img/x.svg';
 const footerForm = document.querySelector('.footer-form');
 footerForm.addEventListener('submit', submitFooterForm);
 
