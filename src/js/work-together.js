@@ -40,7 +40,7 @@ async function submitFooterForm(event) {
       aria-label="button to close the message"
     >
       <svg class="icon-close-modal" width="22" height="22">
-        <use href="${iconSvg}"></use>
+        <use xlink:href="${iconSvg}#icon-close-modal"></use>
       </svg>
     </button>
     <h2 class="footer-modal-title">
