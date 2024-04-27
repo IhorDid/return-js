@@ -11,7 +11,7 @@ import{A as f,S as m,N as p,a as v,i as d,b as g}from"./assets/vendor-5c32e6ac.j
       aria-label="button to close the message"
     >
       <svg class="icon-close-modal" width="22" height="22">
-        <use href="${x}icon-close-modal"></use>
+        <use href="${x}#icon-close-modal"></use>
       </svg>
     </button>
     <h2 class="footer-modal-title">
