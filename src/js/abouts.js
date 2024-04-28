@@ -25,6 +25,20 @@ const boboob = new Swiper('.swiper-about', {
     nextEl: '.about-button-next',
   },
   spaceBetween: 0,
+  on: {
+    slideChange: function (swiper) {
+      const activeIndex = swiper.activeIndex;
+      const allSlides = swiper.slides;
+
+      // Видаляємо id 'active' у всіх слайдів
+      allSlides.forEach(slide => {
+        slide.removeAttribute('id');
+      });
+
+      // Додаємо id 'active' до активного слайда
+      allSlides[activeIndex].setAttribute('id', 'active');
+    },
+  },
   breakpoints: {
     320: {
       slidesPerView: 2,
