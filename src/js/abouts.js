@@ -1,12 +1,13 @@
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
 
-new Accordion('#acc3', {
+new Accordion('.about-me-secondlist', {
   openOnInit: [0],
   showMultiple: true,
 });
@@ -36,3 +37,4 @@ const boboob = new Swiper('.swiper-about', {
     },
   },
 });
+export { boboob };
