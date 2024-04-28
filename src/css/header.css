@@ -19,6 +19,10 @@
   height: 15px; /* Нова висота при наведенні */
 }
 
+.hidden-modal {
+  display: none;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -106,7 +110,6 @@
 }
 
 .modal-menu-item {
-  border-bottom: 1px solid #fafafa;
   transition: color 0.3s;
 }
 
