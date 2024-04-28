@@ -26,17 +26,17 @@ const boboob = new Swiper('.swiper-about', {
   },
   spaceBetween: 0,
   on: {
-    slideChange: function () {
-      const activeIndex = this.activeIndex;
-      const allSlides = document.querySelectorAll('.swiper-slide-about');
+    slideChange: function (swiper) {
+      const activeIndex = swiper.activeIndex;
+      const allSlides = swiper.slides;
 
-      // Видалимо клас 'active' у всіх слайдів
+      // Видаляємо id 'active' у всіх слайдів
       allSlides.forEach(slide => {
-        slide.classList.remove('active');
+        slide.removeAttribute('id');
       });
 
-      // Додамо клас 'active' до активного слайда
-      allSlides[activeIndex].classList.add('active');
+      // Додаємо id 'active' до активного слайда
+      allSlides[activeIndex].setAttribute('id', 'active');
     },
   },
   breakpoints: {

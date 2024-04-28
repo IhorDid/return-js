@@ -317,7 +317,7 @@ section .ac .ac-trigger::after {
   margin: 0;
 }
 
-.active {
+#active {
   background-color: rgba(237, 59, 68, 1);
   border: 1px solid rgba(237, 59, 68, 1) !important;
 }
