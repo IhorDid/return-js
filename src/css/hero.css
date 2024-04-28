@@ -1,10 +1,14 @@
 .hero-section {
     position: relative;
 
-    background-image: linear-gradient(to right,
-        rgb(246, 1, 1),
-        rgb(11, 11, 11)
-    );
+    background-image: url(../img/hero/hero_mob@1x.png);
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: url(../img/hero/hero_mob@2x.png);
+    }
 }
 
 .hero-title-box {
@@ -56,15 +60,27 @@
     
     font-size: 14px;
     letter-spacing: -0.02em;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-link:hover,
 .hero-link:focus {
-    border: solid #FFF;
+    border: 1px solid #FFF;
 }
 
 
 @media only screen and (min-width: 768px) {
+
+    .hero-section {
+            background-image: url(../img/hero/hero_tab@1x.png);
+        }
+    
+        @media screen and (min-resolution: 192dpi) {
+            .hero-section {
+                background-image: url(../img/hero/hero_tab@2x.png);
+            }
+        }
 
     .hero-title-box {
         padding-top: 300px;
@@ -99,10 +115,20 @@
 
 @media only screen and (min-width: 1440px) {
 
-        .hero-title-box {
-            max-width: 1084px;
-    
-            padding-bottom: 243px;
+    .hero-section {    
+            background-image: url(../img/hero/hero_desk@1x.png);
         }
+    
+        @media screen and (min-resolution: 192dpi) {
+            .hero-section {
+                background-image: url(../img/hero/hero_desk@2x.png);
+            }
+        }
+
+    .hero-title-box {
+         max-width: 1090px;
+    
+        padding-bottom: 243px;
+    }
 
 }
