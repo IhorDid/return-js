@@ -15,26 +15,7 @@ async function serviceReviews() {
   return resp.json();
 }
 
-serviceReviews().then(data => {
-  listReviews.insertAdjacentHTML(
-    'afterbegin',
-    data.map(
-      ({ author, avatar_url, review }) => `
-    <div class="review-card">
-       /* <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
-        <h3 class="review-card-name">${author}</h3>
-        <p class="review-card-text">${review}</p>
-    </div>`
-    ).join('')
-  );
-
-  swiper.update();
-});
-
-
-
-
-const swiper = new Swiper('.reviews-swiper', {
+const swiperReviews = new Swiper('.reviews-swiper', {
 
   modules: [Navigation],
   
@@ -64,6 +45,28 @@ const swiper = new Swiper('.reviews-swiper', {
   },
 
 });
+
+
+serviceReviews().then(data => {
+  listReviews.insertAdjacentHTML(
+    'afterbegin',
+    data.map(
+      ({ author, avatar_url, review }) => `
+    <div class="review-card">
+       /* <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
+        <h3 class="review-card-name">${author}</h3>
+        <p class="review-card-text">${review}</p>
+    </div>`
+    ).join('')
+  );
+
+  swiperReviews.update();
+});
+
+
+
+
+
 
 /*
 const swiperContainer = document.querySelector('.reviews-swiper');
