@@ -10,14 +10,16 @@
 }
 
 
-.swiper {
-    /* Этот размер работает до ширины 768*/
+ /*.swiper {
+    Этот размер работает до ширины 768
     width: 343px;
     height: 302px;
-}
+}*/
 
 .reviews-swiper-cust {
     width: 343px;
+
+    margin: 0;
 
 }
 
@@ -68,4 +70,11 @@
         width: 704px;
         gap: 16px;
     } 
+}
+
+@media only screen and (min-width: 1440px) {
+    .reviews-swiper-cust {
+        width: 1376px;
+        gap: 16px;
+    }
 }
