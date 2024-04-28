@@ -1,5 +1,5 @@
 .benefits {
-  padding-bottom: 82px;
+  padding-bottom: 32px;
 }
 .benefits-wrapper {
   padding-top: 32px;
@@ -28,6 +28,37 @@
   gap: 16px;
   list-style-type: none;
   padding: 0;
+}
+
+/* animation */
+.benefits-item:hover .benefits-icon,
+.benefits-item:focus .benefits-icon {
+  animation-name: turn-around;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turn-around {
+  0% {
+    transform: rotate3d(180deg);
+  }
+
+  25% {
+    transform: rotateY(90deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  75% {
+    transform: rotateY(270deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .benefits-item {
@@ -163,8 +194,6 @@
   }
 
   .btn-benefits {
-    /* margin-top: 64px; */
-
     position: absolute;
     top: 85%;
     left: 46%;
