@@ -1,10 +1,7 @@
-
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-
-
 
 // Функция рендеринга
 
@@ -16,9 +13,8 @@ async function serviceReviews() {
 }
 
 const swiperReviews = new Swiper('.reviews-swiper', {
-
   modules: [Navigation],
-  
+
   keyboard: {
     enabled: true,
     onlyInViewport: false,
@@ -32,41 +28,36 @@ const swiperReviews = new Swiper('.reviews-swiper', {
       slidesPerView: 2,
     },
     // when window width is >= 1440px
-   1440: {
+    1440: {
       slidesPerView: 4,
     },
   },
 
   modules: [Navigation],
-  
+
   navigation: {
     nextEl: '.swiper-btn-prev',
     prevEl: '.swiper-btn-next',
   },
-
 });
-
 
 serviceReviews().then(data => {
   listReviews.insertAdjacentHTML(
     'afterbegin',
-    data.map(
-      ({ author, avatar_url, review }) => `
+    data
+      .map(
+        ({ author, avatar_url, review }) => `
     <div class="review-card">
        /* <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
         <h3 class="review-card-name">${author}</h3>
         <p class="review-card-text">${review}</p>
     </div>`
-    ).join('')
+      )
+      .join('')
   );
 
   swiperReviews.update();
 });
-
-
-
-
-
 
 /*
 const swiperContainer = document.querySelector('.reviews-swiper');

@@ -2,6 +2,7 @@ import { elements } from './elements';
 
 // import to js "elements"
 // footerForm: document.querySelector('.footer-form'),
+// goTopBtn: document.querySelector('.to-top'),
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -55,6 +56,7 @@ async function submitFooterForm(event) {
 `);
     instance.show();
     document.querySelector('body').classList.add('fix-scroll');
+    goTopBtn.classList.add('is-hidden');
     localStorage.removeItem(key);
     handleClosing(instance.close);
     event.target.reset();
@@ -77,10 +79,12 @@ function handleClosing(callback) {
     ) {
       callback();
       document.querySelector('body').classList.remove('fix-scroll');
+      goTopBtn.classList.remove('is-hidden');
     }
     if (event.key === 'Escape') {
       callback();
       document.querySelector('body').classList.remove('fix-scroll');
+      goTopBtn.classList.remove('is-hidden');
     }
   }
 }
@@ -107,4 +111,26 @@ function setPreviousValue() {
 
   userEmail.value = previousEmail || '';
   comments.value = previousMessage || '';
+}
+// scroll to top
+const goTopBtn = document.querySelector('.to-top');
+
+window.addEventListener('scroll', trackScroll);
+goTopBtn.addEventListener('click', goTop);
+
+function trackScroll() {
+  const scrolled = window.scrollY;
+  const coords = document.documentElement.clientHeight;
+
+  if (scrolled > coords) {
+    goTopBtn.classList.remove('is-hidden');
+  } else {
+    goTopBtn.classList.add('is-hidden');
+  }
+}
+
+function goTop() {
+  if (window.scrollY > 0) {
+    window.scrollTo(0, 0);
+  }
 }
