@@ -20,8 +20,8 @@ serviceReviews().then(data => {
     'afterbegin',
     data.map(
       ({ author, avatar_url, review }) => `
-    <div class="swiper-slide review-card">
-        <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
+    <div class="review-card">
+       /* <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
         <h3 class="review-card-name">${author}</h3>
         <p class="review-card-text">${review}</p>
     </div>`
@@ -33,8 +33,8 @@ serviceReviews().then(data => {
 
 
 
-/*
-const swiper = new Swiper('.swiper', {
+
+const swiper = new Swiper('.reviews-swiper', {
 
   modules: [Navigation],
   
@@ -51,7 +51,7 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 2,
     },
     // when window width is >= 1440px
-    1440: {
+   1440: {
       slidesPerView: 4,
     },
   },
@@ -59,13 +59,13 @@ const swiper = new Swiper('.swiper', {
   modules: [Navigation],
   
   navigation: {
-    nextEl: '.swiper-button-prev',
-    prevEl: '.swiper-button-next',
+    nextEl: '.swiper-btn-prev',
+    prevEl: '.swiper-btn-next',
   },
 
 });
-*/
 
+/*
 const swiperContainer = document.querySelector('.reviews-swiper');
 const swiper = new Swiper(swiperContainer, {
   modules: [Navigation],
