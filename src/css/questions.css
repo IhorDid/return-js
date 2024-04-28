@@ -1,5 +1,3 @@
-/*_ Media Queries_*/
-
 #questions {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -78,6 +76,14 @@
 
 .rotated {
   transform: rotate(180deg);
+}
+
+/*_ Media Queries_*/
+
+@media only screen and (min-width: 375px) {
+  .faq-header {
+    max-width: 265px;
+  }
 }
 
 /* _ Tablet _ */
