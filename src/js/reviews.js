@@ -1,7 +1,10 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
+import axios from 'axios';
+
 // Функция рендеринга
+/*
 const listReviews = document.querySelector('.js-list');
 
 async function serviceReviews() {
@@ -26,6 +29,40 @@ serviceReviews().then(data => {
 
     // reviewsSwiper.update();
 });
+*/
+
+const listReviews = document.querySelector('.js-list');
+
+async function serviceReviews() {
+  const resp = await axios('https://portfolio-js.b.goit.study/api/reviews');
+  return resp.data;
+}
+
+async function createReviews() {
+  try {
+    const response = await serviceReviews();
+    console.log(response);
+    listReviews.insertAdjacentHTML(
+      'afterbegin',
+      response
+        .map(
+          ({ author, avatar_url, review }) => `
+          <div class="swiper-slide review-card">
+        <img src="${avatar_url}" alt="${author}" class="review-card-foto"/>
+        <h3 class="review-card-name">${author}</h3>
+        <p class="review-card-text">${review}</p>
+      </div>`
+        )
+        .join('')
+    );
+  } catch (error) {
+    alert(error.message);
+  }
+}
+createReviews();
+
+
+
 
 const reviewsSwiper = new Swiper('#reviews-swiper', {
   direction: 'horizontal',
