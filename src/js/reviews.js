@@ -67,16 +67,28 @@ createReviews();
 const reviewsSwiper = new Swiper('#reviews-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
+  slidesPerGroup: 1,
+
+  autoHeight: true,
+  //оболочка слайдера адаптирует свою высоту к высоте текущего активного слайда.
+
+
+
+  mousewheel: {
+    invert: true,
+  },
+
+
 
   breakpoints: {
     768: {
       slidesPerView: 2,
-      // slidesPerGroup: 1,
+      slidesPerGroup: 1,
       spaceBetween: 16,
     },
     1440: {
       slidesPerView: 4,
-      // slidesPerGroup: 1,
+      slidesPerGroup: 1,
       spaceBetween: 18,
     },
   },
