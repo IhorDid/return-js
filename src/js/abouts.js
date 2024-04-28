@@ -25,6 +25,20 @@ const boboob = new Swiper('.swiper-about', {
     nextEl: '.about-button-next',
   },
   spaceBetween: 0,
+  on: {
+    slideChange: function () {
+      const activeIndex = this.activeIndex;
+      const allSlides = document.querySelectorAll('.swiper-slide-about');
+
+      // Видалимо клас 'active' у всіх слайдів
+      allSlides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      // Додамо клас 'active' до активного слайда
+      allSlides[activeIndex].classList.add('active');
+    },
+  },
   breakpoints: {
     320: {
       slidesPerView: 2,
