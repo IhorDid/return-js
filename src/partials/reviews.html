@@ -1,24 +1,36 @@
 <section class="section-reviews" id="">
-    <div class="container">
+  <div class="container">
+    <h2 class="section-reviews-title">REVIEWS</h2>
 
-        <h2 class="section-reviews-title">REVIEWS</h2>
-
-        <div class="reviews-swiper reviews-swiper-cust ">
-            <div class="js-list reviews-swiper-wrapper-cust">
-                
-                <!--Рендеринг
-            <div class="review-card">
+  <div class="swiper reviews-swiper-cust reviews-swiper" id="hamala">
+      <div class="js-list swiper-wrapper reviews-swiper-wrapper-cust">
+        <!--Рендеринг
+            <div class="swiper-slide review-card">
                 <img src="${avatar_url}" alt="${author}" class="review-card-foto" />
                 <h3 class="review-card-name">${author}</h3>
                 <p class="review-card-text">${review}</p>
             </div>-->
+      </div>
 
-            </div>
-            
-
-            <div class=".swiper-btn-prev"></div>
-            <div class=".swiper-btn-next"></div>
-
+      <div class="slider-buttons">
+        <div class="btn-prev-review-wrapper">
+          <button class="btn-prev-review" aria-label="Previous Review">
+            <svg class="reviews-arrow-left">
+              <use href="../img/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
         </div>
+
+        <div class="btn-next-review-wrapper">
+          <button class="btn-next-review" aria-label="Next Review">
+            <svg class="reviews-arrow-right">
+              <use href="../img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
+    </div>
+  </div>
 </section>

@@ -1,17 +1,18 @@
-.abount-section {
+#about-me {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 @media (min-width: 768px) {
-  .abount-section {
+  #about-me {
+    padding-top: 48px;
     padding-bottom: 48px;
   }
 }
 
 @media (min-width: 1440px) {
-  .abount-section {
-    padding-top: 48px;
+  #about-me {
+    padding-top: 82px;
     padding-bottom: 82px;
   }
 }
@@ -123,7 +124,7 @@
 .about-me-secondpart {
   max-width: 100%;
   padding-top: 16px;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 768px) {
@@ -158,7 +159,8 @@
   width: 100%;
   height: 36px;
   justify-content: space-between;
-  margin: 0px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .about-me-header-third {
@@ -349,18 +351,18 @@ section .ac .ac-trigger::after {
 about-me-arrow-up {
   stroke: aliceblue;
 }
-.abuot-radius {
+.about-radius {
   width: 260px;
   height: 130px;
 }
 @media (min-width: 768px) {
-  .abuot-radius {
+  .about-radius {
     width: 600px;
     height: 200px;
   }
 }
 @media (min-width: 1440px) {
-  .abuot-radius {
+  .about-radius {
     width: 1200px;
     height: 200px;
   }
