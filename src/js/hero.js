@@ -1,18 +1,18 @@
-import heroOne from '../img/hero/hero-1.png';
-import heroTwo from '../img/hero/hero-2.png';
-import heroThree from '../img/hero/hero-3.png';
-import heroFour from '../img/hero/hero-4.png';
-import heroFive from '../img/hero/hero-6.png';
+// import heroOne from '../img/hero/hero-1.png';
+// import heroTwo from '../img/hero/hero-2.png';
+// import heroThree from '../img/hero/hero-3.png';
+// import heroFour from '../img/hero/hero-4.png';
+// import heroFive from '../img/hero/hero-6.png';
 const elements = {
   heroBack: document.querySelector('#background'),
 };
 
 const backgroundImages = [
-  `url(${heroOne})`,
-  `url(${heroTwo})`,
-  `url(${heroThree})`,
-  `url(${heroFour})`,
-  `url(${heroFive})`,
+  `url(/img/hero/hero-1.png)`,
+  `url(/img/hero/hero-2.png)`,
+  `url(/img/hero/hero-3.png)`,
+  `url(/img/hero/hero-4.png)`,
+  `url(/img/hero/hero-6.png)`,
 ];
 let currentIndex = 0;
 
