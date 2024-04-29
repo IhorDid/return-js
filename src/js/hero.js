@@ -20,4 +20,4 @@ function changeBackground() {
   currentIndex = (currentIndex + 1) % backgroundImages.length;
 }
 
-setInterval(changeBackground, 3000);
+setInterval(changeBackground, 1500);
