@@ -67,7 +67,9 @@ const reviewsSwiper = new Swiper('#reviews-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   slidesPerGroup: 1,
-
+  keyboard: {
+    enabled: true,
+  },
   autoHeight: true,
   //оболочка слайдера адаптирует свою высоту к высоте текущего активного слайда.
 
