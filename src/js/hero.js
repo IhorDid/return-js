@@ -7,13 +7,7 @@ const elements = {
   heroBack: document.querySelector('#background'),
 };
 
-const backgroundImages = [
-  `${heroOne}`,
-  `${heroTwo}`,
-  `${heroThree}`,
-  `${heroFour}`,
-  `${heroFive}`,
-];
+const backgroundImages = [heroOne, heroTwo, heroThree, heroFour, heroFive];
 let currentIndex = 0;
 
 function changeBackground() {
