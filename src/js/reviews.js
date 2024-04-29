@@ -31,7 +31,7 @@ serviceReviews().then(data => {
 });
 */
 
-const listReviews = document.querySelector('.review-card');
+const listReviews = document.querySelector('#review-card');
 
 async function serviceReviews() {
   const resp = await axios('https://portfolio-js.b.goit.study/api/reviews');
