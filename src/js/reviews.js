@@ -48,7 +48,7 @@ async function createReviews() {
         .map(
           ({ author, avatar_url, review }) => `
           <li class="swiper-slide review-card">
-        <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy" class="review-card-foto"/>
+        <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
         <div class="position">
         <h3 class="review-card-name">${author}</h3>
         <p class="review-card-text">${review}</p>
