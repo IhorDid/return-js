@@ -46,8 +46,8 @@ async function createReviews() {
       'afterbegin',
       response
         .map(
-          ({ author, avatar_url, review }) => `
-          <li class="swiper-slide review-card">
+          ({ _id, author, avatar_url, review }) => `
+          <li class="review-card   swiper-slide"  id="${_id}">
         <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
         <div class="position">
         <h3 class="review-card-name">${author}</h3>
