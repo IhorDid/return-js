@@ -1,9 +1,6 @@
 .covers-section {
 }
-.container {
-}
-.covers-container {
-}
+
 .covers-h {
   display: none;
 }
@@ -39,6 +36,10 @@
   animation-iteration-count: infinite;
 }
 
+.marquee-inner:hover .marquee__line {
+  animation-play-state: paused;
+}
+
 @keyframes marqueeLine {
   0% {
     transform: translateX(70%);
@@ -53,6 +54,13 @@
 
 .covers-image {
   min-width: 282px;
+}
+
+.covers-section {
+  display: grid;
+}
+.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -116,6 +124,3 @@
     }
   }
 }
- 
-
-
