@@ -1,6 +1,13 @@
 .covers-section {
+  display: grid;
 }
 
+.container {
+}
+/*_ Media Queries_*/
+.covers-container {
+  padding: 32px 16px;
+}
 .covers-h {
   display: none;
 }
@@ -35,11 +42,6 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-
-.marquee-inner:hover .marquee__line {
-  animation-play-state: paused;
-}
-
 @keyframes marqueeLine {
   0% {
     transform: translateX(70%);
@@ -51,19 +53,15 @@
     transform: translateX(70%);
   }
 }
-
 .covers-image {
   min-width: 282px;
 }
-
-.covers-section {
-  display: grid;
-}
-.show {
-  opacity: 1;
-}
+/* _ Tablet _ */
 
 @media screen and (min-width: 768px) {
+  .covers-container {
+    padding: 48px 32px;
+  }
   .content-covers {
     background-image: url(../img/convers/back.png);
     background-position: left;
@@ -96,8 +94,11 @@
     }
   }
 }
-
+/* _ Desktop _ */
 @media screen and (min-width: 1440px) {
+  .covers-container {
+    padding: 82px 0px;
+  }
   .content-covers {
     background-position: center;
   }
@@ -124,3 +125,8 @@
     }
   }
 }
+
+ 
+ 
+
+
