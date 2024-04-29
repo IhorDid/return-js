@@ -1,12 +1,19 @@
+.projects-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .projects-title {
+  margin-bottom: 32px;
+
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+
   color: rgba(250, 250, 250, 0.4);
-  margin-bottom: 32px;
 }
 
 .projects-item {
@@ -14,8 +21,9 @@
 }
 
 .projects-info-wrapper {
-  background-color: #fafafa;
   padding: 32px;
+
+  background-color: #fafafa;
   border-radius: 24px 24px 0px 0px;
 }
 
@@ -27,42 +35,48 @@
 }
 
 .projects-skill {
-  border: 1px solid rgba(28, 29, 32, 0.2);
-  border-radius: 60px;
-  padding: 13px 18px 13px 18px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: #1c1d20;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 46px;
+  padding: 13px 18px 13px 18px;
+
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  color: #1c1d20;
 }
 
 .projects-info-wrapper h3 {
+  margin: 94px auto 32px 0;
+
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16667;
   letter-spacing: -0.03em;
+
   color: #1c1d20;
-  margin: 94px auto 32px 0;
 }
 
 .projects-link {
-  border-radius: 60px;
+  display: inline-block;
   padding: 13px 32px;
   width: 141px;
   height: 45px;
-  background-color: #ed3b44;
+
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
+
   color: #fafafa;
-  display: inline-block;
+  border-radius: 60px;
+  background-color: #ed3b44;
 }
 
 .projects-link:hover {
@@ -70,10 +84,11 @@
 }
 
 .projects-img-wrapper {
-  background-color: #242527;
-  border-radius: 0 0 24px 24px;
   height: auto;
   padding: 100px 16px;
+
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
 }
 
 .projects-btn-container {
@@ -84,29 +99,43 @@
   margin-top: 32px;
 }
 
-.projects-prev-btn {
-  border: 1px solid rgba(250, 250, 250, 0.5);
-  border-radius: 60px;
-  padding: 14px;
-  width: 52px;
-  height: 52px;
-  background-color: transparent;
-
+.projects-prev-btn,
+.projects-next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 14px;
+  border-radius: 60px;
+  background-color: transparent;
+  stroke: var(--white-text-color);
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  transition: background-color 0.3s ease;
+  overflow: visible;
+  cursor: pointer;
 }
 
-.projects-next-btn {
-  border: 1px solid rgba(250, 250, 250, 0.5);
-  border-radius: 60px;
+.projects-prev-btn[disabled],
+.projects-next-btn[disabled] {
+  width: 68px;
+  height: 68px;
   padding: 14px;
-  width: 52px;
-  height: 52px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  color: rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  stroke: rgba(250, 250, 250, 0.2);
+}
+
+.projects-prev-btn[disabled] .projects-arrow-left-icon,
+.projects-next-btn[disabled] .projects-arrow-right-icon {
+  stroke: rgba(250, 250, 250, 0.2);
+}
+
+.btn-prev-review:active,
+.btn-next-review:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .projects-arrow-right-icon,
@@ -114,6 +143,11 @@
   stroke: #fafafa;
 }
 @media screen and (min-width: 768px) {
+  .projects-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .projects-item {
     max-width: 704px;
   }
@@ -127,13 +161,14 @@
   }
 
   .projects-skill {
-    padding: 18px;
     height: 55px;
+    padding: 18px;
   }
 
   .projects-info-wrapper h3 {
     width: 470px;
     margin: 164px auto 32px 0;
+
     font-size: 44px;
     line-height: 1;
   }
@@ -166,13 +201,19 @@
 
 /* ---DESKTOP--- */
 @media screen and (min-width: 1440px) {
+  .projects-section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
   .swiper-slide.projects-item {
-    max-width: 1376px;
     display: flex;
+    max-width: 1376px;
   }
 
   .projects-info-wrapper {
     width: 688px;
+
     border-radius: 24px 0 0 24px;
   }
 
@@ -182,7 +223,8 @@
 
   .projects-img-wrapper {
     width: 688px;
-    border-radius: 0 24px 24px 0;
     padding: 120px 37px;
+
+    border-radius: 0 24px 24px 0;
   }
 }
