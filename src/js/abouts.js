@@ -29,17 +29,26 @@ const boboob = new Swiper('.swiper-about', {
   },
   spaceBetween: 0,
   on: {
-    slideChange: function (swiper) {
-      const activeIndex = swiper.activeIndex;
-      const allSlides = swiper.slides;
-
-      // Видаляємо id 'active' у всіх слайдів
-      allSlides.forEach(slide => {
-        slide.removeAttribute('id');
+    init: function () {
+      const activeIndex = this.activeIndex;
+      this.slides.forEach((slide, index) => {
+        if (index === activeIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
       });
+    },
 
-      // Додаємо id 'active' до активного слайда
-      allSlides[activeIndex].setAttribute('id', 'active');
+    slideChange: function () {
+      const activeIndex = this.activeIndex;
+      this.slides.forEach((slide, index) => {
+        if (index === activeIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
     },
   },
   breakpoints: {
@@ -54,4 +63,5 @@ const boboob = new Swiper('.swiper-about', {
     },
   },
 });
+
 export { boboob };
