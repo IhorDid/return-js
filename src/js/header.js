@@ -6,7 +6,24 @@ const variables = {
   menuItems: document.querySelectorAll('.menu-item'),
   modalLinks: document.querySelectorAll('.modal-menu-item a'),
   closeButton: document.querySelector('.modal-close-btn'),
+  mobileModal: document.querySelector('.mobile-modal'),
+  modalOrderBtns: document.querySelectorAll('.modal-order-btn'),
 };
+
+function addHiddenClass() {
+  if (variables.mobileModal) {
+    variables.mobileModal.classList.add('is-hidden');
+    document.body.classList.remove('no-scroll');
+  }
+}
+
+function closeModalBtn() {
+  variables.modalOrderBtns.forEach(function (btn) {
+    btn.addEventListener('click', addHiddenClass);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', closeModalBtn());
 
 function openModal() {
   document.body.classList.add('no-scroll');
