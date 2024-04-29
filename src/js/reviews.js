@@ -47,11 +47,13 @@ async function createReviews() {
       response
         .map(
           ({ author, avatar_url, review }) => `
-          <div class="swiper-slide review-card">
-        <img src="${avatar_url}" alt="${author}" class="review-card-foto"/>
+          <li class="swiper-slide review-card">
+        <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy" class="review-card-foto"/>
+        <div class="position">
         <h3 class="review-card-name">${author}</h3>
         <p class="review-card-text">${review}</p>
-      </div>`
+     </div>
+        </li>`
         )
         .join('')
     );
@@ -61,9 +63,6 @@ async function createReviews() {
 }
 createReviews();
 
-
-
-
 const reviewsSwiper = new Swiper('#reviews-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -72,13 +71,9 @@ const reviewsSwiper = new Swiper('#reviews-swiper', {
   autoHeight: true,
   //оболочка слайдера адаптирует свою высоту к высоте текущего активного слайда.
 
-
-
   mousewheel: {
     invert: true,
   },
-
-
 
   breakpoints: {
     768: {
