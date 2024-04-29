@@ -23,18 +23,17 @@
 
 /* Это swiper-slide */
 .review-card {
-  width: 343px;
-
-  padding: 32px 24px 32px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
+  padding: 32px 24px;
+  width: 332px;
+  height: 302px;
 
   display: flex;
   flex-direction: column;
 
   justify-content: flex-start;
   align-items: flex-start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .review-card-name {
