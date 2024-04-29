@@ -3,7 +3,6 @@
 }
 .benefits-wrapper {
   padding-top: 32px;
-  padding-bottom: 64px;
   margin: 0;
 }
 
@@ -151,6 +150,10 @@
     align-items: flex-start;
     gap: 16px;
   }
+  .benefits {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   .benefits-item {
     max-width: 344px;
@@ -170,6 +173,10 @@
     justify-content: space-between;
     padding-bottom: 128px;
     position: relative;
+  }
+  .benefits {
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 
   .benefits-content {
