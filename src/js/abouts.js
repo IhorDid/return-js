@@ -33,9 +33,9 @@ const boboob = new Swiper('.swiper-about', {
       const activeIndex = this.activeIndex;
       this.slides.forEach((slide, index) => {
         if (index === activeIndex) {
-          slide.classList.add('active');
+          slide.classList.add('active-action');
         } else {
-          slide.classList.remove('active');
+          slide.classList.remove('active-action');
         }
       });
     },
@@ -44,9 +44,9 @@ const boboob = new Swiper('.swiper-about', {
       const activeIndex = this.activeIndex;
       this.slides.forEach((slide, index) => {
         if (index === activeIndex) {
-          slide.classList.add('active');
+          slide.classList.add('active-action');
         } else {
-          slide.classList.remove('active');
+          slide.classList.remove('active-action');
         }
       });
     },
