@@ -13,6 +13,9 @@ new Accordion('.about-me-secondlist', {
 });
 
 const boboob = new Swiper('.swiper-about', {
+  autoplay: {
+    delay: 2500,
+  },
   centeredSlides: false,
   grabCursor: true,
   loop: true,
