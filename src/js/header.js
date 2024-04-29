@@ -57,6 +57,9 @@ function toggleMenuHead() {
       if (!item.classList.contains('opacity')) {
         item.style.opacity = 0;
         item.classList.remove('active');
+        if (!item.classList.contains('active')) {
+          item.classList.add('pointer-events-none');
+        }
       }
     }, (variables.menuItems.length - index) * 50);
   }
@@ -70,6 +73,9 @@ function toggleMenuHead() {
       if (!item.classList.contains('opacity')) {
         item.style.opacity = 0;
         item.classList.add('active');
+        if (item.classList.contains('active')) {
+          item.classList.remove('pointer-events-none');
+        }
         setTimeout(() => {
           item.style.opacity = 1;
         }, 50);

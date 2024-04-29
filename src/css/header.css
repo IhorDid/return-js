@@ -37,6 +37,7 @@
 
 /* Header styles */
 .head-cont {
+  padding-top: 32px;
   display: flex;
   justify-content: space-between;
 }
@@ -103,6 +104,10 @@
 
 .menu-title {
   display: none;
+}
+
+.pointer-events-none {
+  pointer-events: none;
 }
 
 .menu-item {
