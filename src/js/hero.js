@@ -3,11 +3,11 @@ const elements = {
 };
 
 const backgroundImages = [
-  'url(../img/hero/hero-1.png)',
-  'url(../img/hero/hero-2.png)',
-  'url(../img/hero/hero-3.png)',
-  'url(../img/hero/hero-4.png)',
-  'url(../img/hero/hero-6.png)',
+  'url(./img/hero/hero-1.png)',
+  'url(./img/hero/hero-2.png)',
+  'url(./img/hero/hero-3.png)',
+  'url(./img/hero/hero-4.png)',
+  'url(./img/hero/hero-6.png)',
 ];
 let currentIndex = 0;
 
@@ -16,7 +16,7 @@ function changeBackground() {
   setTimeout(function () {
     elements.heroBack.style.backgroundImage = backgroundImages[currentIndex];
     elements.heroBack.style.opacity = 1;
-  }, 3000);
+  }, 2000);
   currentIndex = (currentIndex + 1) % backgroundImages.length;
 }
 
