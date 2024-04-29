@@ -8,11 +8,11 @@ const elements = {
 };
 
 const backgroundImages = [
-  `url(/img/hero/hero-1.png)`,
-  `url(/img/hero/hero-2.png)`,
-  `url(/img/hero/hero-3.png)`,
-  `url(/img/hero/hero-4.png)`,
-  `url(/img/hero/hero-6.png)`,
+  'url(/img/hero/hero-1.png)',
+  'url(/img/hero/hero-2.png)',
+  'url(/img/hero/hero-3.png)',
+  'url(/img/hero/hero-4.png)',
+  'url(/img/hero/hero-6.png)',
 ];
 let currentIndex = 0;
 
