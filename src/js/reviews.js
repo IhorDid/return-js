@@ -31,7 +31,7 @@ serviceReviews().then(data => {
 });
 */
 
-const listReviews = document.querySelector('.js-list');
+const listReviews = document.querySelector('#review-card');
 
 async function serviceReviews() {
   const resp = await axios('https://portfolio-js.b.goit.study/api/reviews');
@@ -51,7 +51,7 @@ async function createReviews() {
         <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
         <div class="position">
         <h3 class="review-card-name">${author}</h3>
-        <p class="review-card-text">${review}</p>
+        <p class="review-card-text">${review.trim()}</p>
      </div>
         </li>`
         )
