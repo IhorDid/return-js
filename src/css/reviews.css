@@ -1,89 +1,99 @@
+.reviews-container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: var(--background);
+
+  padding: 0 16px;
+}
+
 .section-reviews {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 .section-reviews-title {
+  text-align: left;
+  font: 600 16px/1.5 -0.02em;
+
+  text-transform: uppercase;
   margin-bottom: 32px;
-
-  font-weight: 600;
-  font-size: 16px;
   color: rgba(250, 250, 250, 0.4);
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  font-family: 'Inter Tight', sans-serif;
 }
-
-.reviews-swiper-cust {
-  width: 343px;
-  
-}
-
-
-
-.reviews-swiper-wrapper-cust {
-  height: 302px;
-}
-
 
 /* Это swiper-slide */
 .review-card {
-  padding: 32px 24px;
-
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
-
-
+  padding: 32px 24px;
+  width: 332px;
   height: 302px;
-}
 
+  display: flex;
+  flex-direction: column !important;
 
-.review-card-foto {
-  margin-bottom: 32px;
-
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .review-card-name {
-  margin-bottom: 8px;
-
-  font-weight: 600;
-  font-size: 20px;
   color: #fafafa;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  font-family: 'Inter Tight', sans-serif;
+  margin-bottom: 8px;
+  font: 600 20px/1.5 -0.02em;
+}
+.position {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 295px;
 }
 
 .review-card-text {
+  color: rgba(250, 250, 250, 0.6);
+  max-width: 295px;
+  height: 120px;
+  text-align: left;
   font-weight: 500;
   font-size: 16px;
-  color: rgba(250, 250, 250, 0.6);
   line-height: 1.5;
   letter-spacing: -0.02em;
-  font-family: 'Inter Tight', sans-serif;
-  
-  display: block;
-  max-height: 158px;
+  opacity: 0.6;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 20px;
+}
+.review-card-text::-webkit-scrollbar {
+  width: 15px; /* Новая ширина полосы прокрутки */
 }
 
+.review-card-text::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg);
+  border-radius: 20px;
+}
 
+.review-card-text::-webkit-scrollbar-track {
+  background: transparent; /* Убираем стандартный фон полосы прокрутки */
+}
+.review-card-text::-webkit-scrollbar-thumb:hover {
+  background: #fdfdfd;
+}
+.review-card-text:hover {
+  color: #ffffff; /* Новый цвет текста при наведении */
+}
 
 .slider-buttons {
-display: flex;
-flex-direction: row;
-justify-content: center;
-
-margin-top: 32px;
+  margin-top: 32px;
+  margin-bottom: 2px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
 }
-
-.btn-prev-review-wrapper {
-  margin-right: 12px;
+.revem-img {
+  border-radius: 10px;
+  margin-bottom: 32px;
+  background: #fafafa;
 }
-
-
 
 .btn-prev-review,
 .btn-next-review {
@@ -107,24 +117,18 @@ margin-top: 32px;
   /*color: var(--arrow-color);*/
   /*border: 1px solid var(--arrow-color);*/
 
-
-    color: rgba(250, 250, 250, 0.2);;
-    border-radius: 60px;
-    padding: 14px;
-    stroke: rgba(250, 250, 250, 0.2);
-    width: 54px;
-    height: 54px;
-
-
-
+  color: rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 14px;
+  stroke: rgba(250, 250, 250, 0.2);
+  width: 54px;
+  height: 54px;
 }
 
 .btn-prev-review[disabled] .reviews-arrow-left,
 .btn-next-review[disabled] .reviews-arrow-right {
-
   /*stroke: var(--arrow-color);*/
   stroke: rgba(250, 250, 250, 0.2);
-
 }
 
 .btn-prev-review:active,
@@ -149,19 +153,44 @@ margin-top: 32px;
 }
 
 @media only screen and (min-width: 768px) {
-  .reviews-swiper-cust {
-    width: 704px;
+  .section-reviews {
+    margin: 48px 32px;
+  }
+
+  .reviews-container {
+    max-width: 768px;
+  }
+  .review-card {
+    width: 344px;
+
+    display: flex;
+    flex-direction: row;
     gap: 16px;
   }
-    
-    .btn-prev-review-wrapper {
-      margin-right: 20px;
-    }
+  .reviews-arrow-left,
+  .reviews-arrow-right {
+    stroke: aliceblue;
+    width: 32px;
+    height: 32px;
+  }
+  #reviews-swiper.btn-prev-review,
+  #reviews-swiper.btn-next-review {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-  .reviews-swiper-cust {
-    width: 1376px;
+  .section-reviews {
+    margin: 82px 0;
+  }
+  .reviews-container {
+    max-width: 1440px;
+  }
+  .review-card {
+    width: 332px;
+  }
+  .review-card-text {
+    width: 284px;
   }
 }
-

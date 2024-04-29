@@ -31,7 +31,7 @@ serviceReviews().then(data => {
 });
 */
 
-const listReviews = document.querySelector('.js-list');
+const listReviews = document.querySelector('#review-card');
 
 async function serviceReviews() {
   const resp = await axios('https://portfolio-js.b.goit.study/api/reviews');
@@ -46,12 +46,14 @@ async function createReviews() {
       'afterbegin',
       response
         .map(
-          ({ author, avatar_url, review }) => `
-          <div class="swiper-slide review-card">
-        <img src="${avatar_url}" alt="${author}" class="review-card-foto"/>
+          ({ _id, author, avatar_url, review }) => `
+          <li class="review-card   swiper-slide"  id="${_id}">
+        <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
+        <div class="position">
         <h3 class="review-card-name">${author}</h3>
-        <p class="review-card-text">${review}</p>
-      </div>`
+        <p class="review-card-text">${review.trim()}</p>
+     </div>
+        </li>`
         )
         .join('')
     );
@@ -61,24 +63,19 @@ async function createReviews() {
 }
 createReviews();
 
-
-
-
 const reviewsSwiper = new Swiper('#reviews-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   slidesPerGroup: 1,
-
+  keyboard: {
+    enabled: true,
+  },
   autoHeight: true,
   //оболочка слайдера адаптирует свою высоту к высоте текущего активного слайда.
-
-
 
   mousewheel: {
     invert: true,
   },
-
-
 
   breakpoints: {
     768: {
