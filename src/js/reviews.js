@@ -3,33 +3,8 @@ import 'swiper/css/bundle';
 
 import axios from 'axios';
 
-// Функция рендеринга
-/*
-const listReviews = document.querySelector('.js-list');
-
-async function serviceReviews() {
-  const resp = await fetch('https://portfolio-js.b.goit.study/api/reviews');
-  return resp.json();
-}
-
-serviceReviews().then(data => {
-  listReviews.insertAdjacentHTML(
-    'afterbegin',
-    data
-      .map(
-        ({ author, avatar_url, review }) => `
-          <div class="swiper-slide review-card">
-        <img src="${avatar_url}" alt="${author}" class="review-card-foto"/>
-        <h3 class="review-card-name">${author}</h3>
-        <p class="review-card-text">${review}</p>
-      </div>`
-      )
-      .join('')
-  );
-
-    // reviewsSwiper.update();
-});
-*/
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const listReviews = document.querySelector('#review-card');
 
@@ -48,17 +23,24 @@ async function createReviews() {
         .map(
           ({ _id, author, avatar_url, review }) => `
           <li class="review-card   swiper-slide"  id="${_id}">
-        <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
-        <div class="position">
-        <h3 class="review-card-name">${author}</h3>
-        <p class="review-card-text">${review.trim()}</p>
-     </div>
-        </li>`
+            <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
+            <div class="position">
+              <h3 class="review-card-name">${author}</h3>
+              <p class="review-card-text">${review.trim()}</p>
+            </div>
+          </li>`
         )
         .join('')
     );
-  } catch (error) {
-    alert(error.message);
+  } catch (error) {;
+    iziToast.error({
+      message: 'No reviews found!',
+      position: 'topRight',
+    });
+    
+    const hiddenPlaceholder = document.querySelector('.placeholder-text-hidden');
+    hiddenPlaceholder.classList.replace('placeholder-text-hidden', 'placeholder-text');
+    console.log(hiddenPlaceholder);
   }
 }
 createReviews();
