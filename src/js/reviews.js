@@ -22,7 +22,7 @@ async function createReviews() {
       response
         .map(
           ({ _id, author, avatar_url, review }) => `
-          <li class="review-card   swiper-slide"  id="${_id}">
+          <li class="review-card   swiper-slide"  id="${_id} review-card-hover">
             <img class="revem-img" src="${avatar_url}" alt="${author}"  width="48" height="48" loading="lazy"/>
             <div class="position">
               <h3 class="review-card-name">${author}</h3>
@@ -32,14 +32,19 @@ async function createReviews() {
         )
         .join('')
     );
-  } catch (error) {;
+  } catch (error) {
     iziToast.error({
       message: 'No reviews found!',
       position: 'topRight',
     });
-    
-    const hiddenPlaceholder = document.querySelector('.placeholder-text-hidden');
-    hiddenPlaceholder.classList.replace('placeholder-text-hidden', 'placeholder-text');
+
+    const hiddenPlaceholder = document.querySelector(
+      '.placeholder-text-hidden'
+    );
+    hiddenPlaceholder.classList.replace(
+      'placeholder-text-hidden',
+      'placeholder-text'
+    );
     console.log(hiddenPlaceholder);
   }
 }
