@@ -17,3 +17,34 @@ const observer = new IntersectionObserver(
   }
 );
 hiddenElements.forEach(el => observer.observe(el));
+
+const marqueeLines = document.querySelectorAll('.marquee__line');
+
+marqueeLines.forEach(line => {
+  line.addEventListener('mouseenter', () => {
+    const image = line.querySelector('.covers-image');
+
+    image.classList.add('rotate-image');
+
+    const englishWish = document.createElement('div');
+    englishWish.textContent = 'Best wishes!';
+    englishWish.classList.add('english-wish');
+
+    line.appendChild(englishWish);
+
+    setTimeout(() => {
+      englishWish.style.animation = 'fadeIn 0.5s ease';
+      englishWish.style.opacity = '1';
+    }, 100);
+  });
+
+  line.addEventListener('mouseleave', () => {
+    const image = line.querySelector('.covers-image');
+
+    image.classList.remove('rotate-image');
+
+    const englishWish = line.querySelector('.english-wish');
+
+    englishWish.remove();
+  });
+});
