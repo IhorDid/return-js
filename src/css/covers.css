@@ -1,9 +1,3 @@
-.covers-section {
-  display: grid;
-}
-
-.container {
-}
 /*_ Media Queries_*/
 .covers-container {
   padding: 32px 16px;
@@ -125,8 +119,3 @@
     }
   }
 }
-
- 
- 
-
-
