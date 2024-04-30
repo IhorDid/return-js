@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/return-js/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/return-js/assets/vendor-ac3b3f94.js">
     <link rel="stylesheet" href="/return-js/assets/vendor-39bf3cbd.css">
-    <link rel="stylesheet" href="/return-js/assets/index-06e52d8a.css">
+    <link rel="stylesheet" href="/return-js/assets/index-8c9eba18.css">
   </head>
   <body>
     <!-- Олег -->
@@ -129,7 +129,7 @@
       <a href="#work-together" class="header-btn"> Order the project</a>
 
       <div class="burger-btn-wrap">
-        <button class="head-btn" type="button">
+        <button aria-label="main header" class="head-btn" type="button">
           <svg width="28" height="28">
             <use href="/return-js/assets/sprite-08705677.svg#icon-burger-menu"></use>
           </svg>
@@ -137,7 +137,7 @@
       </div>
 
       <div class="mobile-modal is-hidden">
-        <button class="modal-close-btn" type="button">
+        <button aria-label="close main" class="modal-close-btn" type="button">
           <svg width="28" height="28">
             <use href="/return-js/assets/sprite-08705677.svg#icon-close-modal"></use>
           </svg>
@@ -145,7 +145,9 @@
         <nav class="modal-nav">
           <ul class="modal-menu list">
             <li class="menu-title item">
-              <button class="title-btn">Menu</button>
+              <button aria-label="title menu header" class="title-btn">
+                Menu
+              </button>
             </li>
             <li class="modal-menu-item item">
               <a class="modal-link-yk" href="#about-me">About me </a>
@@ -402,7 +404,7 @@
           </li>
         </ul>
       </div>
-      <button class="about-button-next about-button-next-about">
+      <button aria-label="about-button-next" class="about-button-next about-button-next-about">
         <svg class="arrow-swiper-about" width="18" height="18">
           <use href="/return-js/assets/sprite-08705677.svg#icon-arrow-right"></use>
         </svg>
@@ -612,7 +614,11 @@
         </li>
       </ul>
       <div class="projects-btn-container">
-        <button class="projects-prev-btn" type="button">
+        <button
+          aria-label="projects-prev-btn"
+          class="projects-prev-btn"
+          type="button"
+        >
           <svg
             class="projects-arrow-left-icon"
             width="24"
@@ -622,7 +628,11 @@
             <use href="/return-js/assets/sprite-08705677.svg#icon-arrow-left"></use>
           </svg>
         </button>
-        <button class="projects-next-btn" type="button">
+        <button
+          aria-label="projects-next-btn"
+          class="projects-next-btn"
+          type="button"
+        >
           <svg
             class="projects-arrow-right-icon"
             width="24"
@@ -1236,7 +1246,9 @@
           placeholder="comments"
         />
       </div>
-      <button class="footer-button" type="submit">Send</button>
+      <button aria-label="Footer Send" class="footer-button" type="submit">
+        Send
+      </button>
     </form>
     <address class="footer-address">
       <ul class="footer-address-list">
