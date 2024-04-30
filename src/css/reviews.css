@@ -210,8 +210,8 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .review-card:hover {
-    transform: scale(1.2);
-    z-index: -2;
+    transform: scale(1.1);
+    z-index: 2;
   }
   .review-card-text {
     width: 284px;
