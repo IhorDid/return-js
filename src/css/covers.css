@@ -6,7 +6,7 @@
   display: none;
 }
 .content-covers {
-  background-image: url(../img/convers/back.png);
+  background-image: url(./img/convers/back.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -49,7 +49,43 @@
 }
 .covers-image {
   min-width: 282px;
+  transition: transform 0.5s ease;
 }
+
+.covers-image:hover {
+  transform: rotate(360deg);
+}
+
+.rotate-image {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}
+
+.marquee__line:hover .covers-image {
+  transform: rotateY(90deg);
+}
+
+.english-wish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0ab16;
+  font-size: 50px;
+  font-family: 'Inter Tight', sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* _ Tablet _ */
 
 @media screen and (min-width: 768px) {
@@ -57,7 +93,7 @@
     padding: 48px 32px;
   }
   .content-covers {
-    background-image: url(../img/convers/back.png);
+    background-image: url(./img/convers/back.png);
     background-position: left;
   }
 
