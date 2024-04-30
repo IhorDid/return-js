@@ -15,22 +15,22 @@
           <source
             media="(min-width:1440px)"
             srcset="
-         ./img/about/about_desk@1x.png
-       ./img/about/about_desk@2x.png
+              ./img/about/about_desk@1x.png 1x,
+              ./img/about/about_desk@2x.png 2x
             "
           />
           <source
             media="(min-width:768px)"
             srcset="
-         ./img/about/about_tab@1x.png
-        ./img/about/about_tab@2x.png
+              ./img/about/about_tab@1x.png 1x,
+              ./img/about/about_tab@2x.png 2x
             "
           />
           <source
             media="(min-width:375px)"
             srcset="
-             ./img/about/about_mob@1x.png
-            ./img/about/about_mob@2x.png
+             ./img/about/about_mob@1x.png 1x
+            ./img/about/about_mob@2x.png 2x
             "
           />
 
@@ -173,7 +173,10 @@
           </li>
         </ul>
       </div>
-      <button aria-label="about-button-next" class="about-button-next about-button-next-about">
+      <button
+        aria-label="about-button-next"
+        class="about-button-next about-button-next-about"
+      >
         <svg class="arrow-swiper-about" width="18" height="18">
           <use href="./img/sprite.svg#icon-arrow-right"></use>
         </svg>
