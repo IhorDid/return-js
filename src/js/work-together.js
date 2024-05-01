@@ -1,9 +1,5 @@
 import { elements } from './elements';
 
-// import to js "elements"
-// footerForm: document.querySelector('.footer-form'),
-// goTopBtn: document.querySelector('.to-top'),
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -11,8 +7,8 @@ import * as basicLightbox from 'basiclightbox';
 
 import postUserInfo from './postApi';
 import iconSvg from '../img/x.svg';
-const footerForm = document.querySelector('.footer-form');
-footerForm.addEventListener('submit', submitFooterForm);
+
+elements.footerForm.addEventListener('submit', submitFooterForm);
 
 // Function that makes POST request and makes a message about success/error for users
 async function submitFooterForm(event) {
@@ -95,7 +91,7 @@ if (localStorage.getItem(key)) {
   setPreviousValue();
 }
 
-footerForm.addEventListener('input', saveValue);
+elements.footerForm.addEventListener('input', saveValue);
 function saveValue(event) {
   const valueObj = JSON.parse(localStorage.getItem(key)) || {};
   const value = event.target.value;
@@ -113,19 +109,18 @@ function setPreviousValue() {
   comments.value = previousMessage || '';
 }
 // scroll to top
-const goTopBtn = document.querySelector('.to-top');
 
 window.addEventListener('scroll', trackScroll);
-goTopBtn.addEventListener('click', goTop);
+elements.goTopBtn.addEventListener('click', goTop);
 
 function trackScroll() {
   const scrolled = window.scrollY;
   const coords = document.documentElement.clientHeight;
 
   if (scrolled > coords) {
-    goTopBtn.classList.remove('is-hidden');
+    elements.goTopBtn.classList.remove('is-hidden');
   } else {
-    goTopBtn.classList.add('is-hidden');
+    elements.goTopBtn.classList.add('is-hidden');
   }
 }
 

@@ -1,24 +1,14 @@
-const variables = {
-  openModalBtn: document.querySelector('.head-btn'),
-  closeModalBtn: document.querySelector('.modal-close-btn'),
-  modal: document.querySelector('.mobile-modal'),
-  titleBtn: document.querySelector('.nav-title-btn'),
-  menuItems: document.querySelectorAll('.menu-item'),
-  modalLinks: document.querySelectorAll('.modal-menu-item a'),
-  closeButton: document.querySelector('.modal-close-btn'),
-  mobileModal: document.querySelector('.mobile-modal'),
-  modalOrderBtns: document.querySelectorAll('.modal-order-btn'),
-};
+import { elements } from './elements';
 
 function addHiddenClass() {
-  if (variables.mobileModal) {
-    variables.mobileModal.classList.add('is-hidden');
+  if (elements.mobileModal) {
+    elements.mobileModal.classList.add('is-hidden');
     document.body.classList.remove('no-scroll');
   }
 }
 
 function closeModalBtn() {
-  variables.modalOrderBtns.forEach(function (btn) {
+  elements.modalOrderBtns.forEach(function (btn) {
     btn.addEventListener('click', addHiddenClass);
   });
 }
@@ -34,22 +24,22 @@ function closeModal() {
 }
 
 function toggleModal() {
-  variables.modal.classList.toggle('is-hidden');
+  elements.modal.classList.toggle('is-hidden');
   document.body.classList.toggle('no-scroll');
 }
 
 function headOpenModal() {
-  variables.openModalBtn.addEventListener('click', toggleModal);
-  variables.closeModalBtn.addEventListener('click', toggleModal);
+  elements.openModalBtn.addEventListener('click', toggleModal);
+  elements.closeModalBtn.addEventListener('click', toggleModal);
 }
 
 function toggleMenuHead() {
-  variables.titleBtn.addEventListener('click', toggleMenu);
+  elements.titleBtn.addEventListener('click', toggleMenu);
 
   document.addEventListener('click', hideOnClickOutside);
 
   function toggleMenu() {
-    const isVisible = variables.menuItems[0].classList.contains('active');
+    const isVisible = elements.menuItems[0].classList.contains('active');
 
     if (isVisible) {
       hideMenuItems();
@@ -66,7 +56,7 @@ function toggleMenuHead() {
   }
 
   function hideMenuItems() {
-    variables.menuItems.forEach(fadeOut);
+    elements.menuItems.forEach(fadeOut);
   }
 
   function fadeOut(item, index) {
@@ -78,11 +68,11 @@ function toggleMenuHead() {
           item.classList.add('pointer-events-none');
         }
       }
-    }, (variables.menuItems.length - index) * 50);
+    }, (elements.menuItems.length - index) * 50);
   }
 
   function showMenuItems() {
-    variables.menuItems.forEach(fadeIn);
+    elements.menuItems.forEach(fadeIn);
   }
 
   function fadeIn(item, index) {
@@ -100,14 +90,14 @@ function toggleMenuHead() {
     }, index * 150);
   }
 
-  variables.menuItems.forEach(function hide(item) {
+  elements.menuItems.forEach(function hide(item) {
     item.classList.add('hidden-modal');
   });
 
-  variables.titleBtn.addEventListener('click', showHiddenModal);
+  elements.titleBtn.addEventListener('click', showHiddenModal);
 
   function showHiddenModal() {
-    variables.menuItems.forEach(show);
+    elements.menuItems.forEach(show);
   }
 
   function show(item) {
@@ -119,17 +109,17 @@ function setupMobileModal() {
   document.addEventListener('DOMContentLoaded', addEventListeners);
 
   function addEventListeners() {
-    variables.modalLinks.forEach(link => {
+    elements.modalLinks.forEach(link => {
       link.addEventListener('click', closeModal);
     });
 
-    variables.closeButton.addEventListener('click', closeModal);
+    elements.closeButton.addEventListener('click', closeModal);
 
-    variables.menuItems.forEach(item => {
+    elements.menuItems.forEach(item => {
       item.addEventListener('click', closeAndHideModal);
     });
 
-    variables.modalLinks.forEach(link => {
+    elements.modalLinks.forEach(link => {
       if (link.classList.contains('modal-link-yk')) {
         link.addEventListener('click', hideModal);
       }
@@ -138,11 +128,11 @@ function setupMobileModal() {
 
   function closeAndHideModal() {
     closeModal();
-    variables.modal.classList.add('is-hidden');
+    elements.modal.classList.add('is-hidden');
   }
 
   function hideModal() {
-    variables.modal.classList.add('is-hidden');
+    elements.modal.classList.add('is-hidden');
   }
 }
 

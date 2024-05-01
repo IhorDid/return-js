@@ -1,11 +1,7 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-// import { elements } from './elements.js';
-
-const elements = {
-  accordionItemsFaq: document.querySelectorAll('.faq'),
-};
+import { elements } from './elements';
 
 function toggleAccordion(item) {
   const headerFaq = item.querySelector('.faq-question-container');

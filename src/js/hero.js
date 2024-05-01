@@ -14,9 +14,7 @@ import tabTree from '../img/hero/tab-2.jpg';
 import tabFour from '../img/hero/tab-3.jpg';
 import tabFive from '../img/hero/tab-4.jpg';
 
-const elements = {
-  heroBack: document.querySelector('#background'),
-};
+import { elements } from './elements';
 const backgroundImages = [heroOne, heroTwo, heroThree, heroFour, heroFive];
 const backgroundImagesTablet = [tabOne, tabTwo, tabTree, tabFour, tabFive];
 const backgroundImagesMobile = [mobOne, mobTwo, mobThree, mobFour, mobFive];

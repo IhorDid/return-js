@@ -1,4 +1,6 @@
-const hiddenElements = document.querySelectorAll('.marquee-inner');
+import { elements } from './elements';
+
+elements.hiddenElements = document.querySelectorAll('.marquee-inner');
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -16,11 +18,11 @@ const observer = new IntersectionObserver(
     threshold: 0.4,
   }
 );
-hiddenElements.forEach(el => observer.observe(el));
+elements.hiddenElements.forEach(el => observer.observe(el));
 
-const marqueeLines = document.querySelectorAll('.marquee__line');
+elements.marqueeLines = document.querySelectorAll('.marquee__line');
 
-marqueeLines.forEach(line => {
+elements.marqueeLines.forEach(line => {
   line.addEventListener('mouseenter', () => {
     const image = line.querySelector('.covers-image');
 

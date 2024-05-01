@@ -6,7 +6,7 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const listReviews = document.querySelector('#review-card');
+import { elements } from './elements';
 
 async function serviceReviews() {
   const resp = await axios('https://portfolio-js.b.goit.study/api/reviews');
@@ -16,8 +16,7 @@ async function serviceReviews() {
 async function createReviews() {
   try {
     const response = await serviceReviews();
-    console.log(response);
-    listReviews.insertAdjacentHTML(
+    elements.listReviews.insertAdjacentHTML(
       'afterbegin',
       response
         .map(
@@ -38,14 +37,10 @@ async function createReviews() {
       position: 'topRight',
     });
 
-    const hiddenPlaceholder = document.querySelector(
-      '.placeholder-text-hidden'
-    );
-    hiddenPlaceholder.classList.replace(
+    elements.hiddenPlaceholder.classList.replace(
       'placeholder-text-hidden',
       'placeholder-text'
     );
-    console.log(hiddenPlaceholder);
   }
 }
 createReviews();
@@ -58,7 +53,6 @@ const reviewsSwiper = new Swiper('#reviews-swiper', {
     enabled: true,
   },
   autoHeight: true,
-  //оболочка слайдера адаптирует свою высоту к высоте текущего активного слайда.
 
   mousewheel: {
     invert: true,
