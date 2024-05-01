@@ -2,9 +2,7 @@
 .covers-container {
   padding: 32px 16px;
 }
-.covers-h {
-  display: none;
-}
+
 .content-covers {
   background-image: url(../img/convers/back.png);
   background-repeat: no-repeat;
