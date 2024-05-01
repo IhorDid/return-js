@@ -27,8 +27,6 @@
 }
 
 .about-me-text {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.16667;
   letter-spacing: -0.03em;
@@ -121,12 +119,11 @@
 }
 
 .about-me-header-third {
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  font-size: 16px;
   color: rgba(250, 250, 250, 0.4);
 }
 
@@ -138,6 +135,7 @@ section .about-me-header-n-btn .about-me-btn-aboutme {
   padding: 9px;
   width: 36px;
   height: 36px;
+
   background-color: inherit;
   stroke: #fafafa;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -151,11 +149,10 @@ section .ac .ac-trigger::after {
 .about-me-secondpart-text {
   padding-top: 12px;
   padding-bottom: 20px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+
   line-height: 1.5;
   letter-spacing: -0.02em;
+
   color: var(--white-text-color);
 }
 
@@ -185,13 +182,14 @@ section .ac .ac-trigger::after {
 }
 
 .about-me-secondlist .about-me-secondlist-item {
+  margin: 0px;
+
   color: inherit;
   background-color: inherit;
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom: solid 1px rgba(250, 250, 250, 0.4);
-  margin: 0px;
 }
 
 @media (min-width: 768px) {
@@ -256,29 +254,28 @@ section .ac .ac-trigger::after {
 }
 
 .swiper-text {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
   font-size: 20px;
   letter-spacing: -0.02em;
   color: #fafafa;
 }
 
 .swiper-slide.swiper-slide-about {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
   white-space: nowrap;
   box-sizing: border-box;
 }
 .swiper-button-next-about {
   display: block;
   position: relative;
+  margin: 0;
   overflow: hidden;
   border: none;
   background-color: transparent;
-  margin: 0;
 }
 
 .swiper-slide-about.active-action {

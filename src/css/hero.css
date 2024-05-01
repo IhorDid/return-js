@@ -1,7 +1,10 @@
 #background {
   transition: background-image 3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
+.animate__flipInX,
+.animate__flipInXip {
+  animation-duration: 3s; /* Установите желаемую длительность анимации */
+}
 .hero-section {
   position: relative;
   margin: 0 auto;

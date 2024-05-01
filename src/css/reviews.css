@@ -74,7 +74,7 @@
   padding-right: 20px;
 }
 .review-card-text::-webkit-scrollbar {
-  width: 15px; /* Новая ширина полосы прокрутки */
+  width: 15px;
 }
 
 .review-card-text::-webkit-scrollbar-thumb {
@@ -83,13 +83,13 @@
 }
 
 .review-card-text::-webkit-scrollbar-track {
-  background: transparent; /* Убираем стандартный фон полосы прокрутки */
+  background: transparent;
 }
 .review-card-text::-webkit-scrollbar-thumb:hover {
   background: #fdfdfd;
 }
 .review-card-text:hover {
-  color: #ffffff; /* Новый цвет текста при наведении */
+  color: #ffffff;
 }
 
 .slider-buttons {
