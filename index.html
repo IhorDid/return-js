@@ -8,13 +8,17 @@
     <title>Portfolio</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
     />
     
     <script type="module" crossorigin src="/return-js/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/return-js/assets/vendor-ac3b3f94.js">
     <link rel="stylesheet" href="/return-js/assets/vendor-39bf3cbd.css">
-    <link rel="stylesheet" href="/return-js/assets/index-f724551e.css">
+    <link rel="stylesheet" href="/return-js/assets/index-3ecbf2a6.css">
   </head>
   <body>
     <!-- Олег -->
@@ -171,7 +175,7 @@
 
 
     <!-- Паша -->
-    <section class="hero-section" id="background">
+    <section class="animate__flipInX hero-section" id="background">
   <div class="container">
     <div class="hero-title-box">
       <h1 class="hero-title">
@@ -429,7 +433,7 @@
               <use href="/return-js/assets/sprite-08705677.svg#icon-user"></use>
             </svg>
             <h3>Expertise</h3>
-            <p>
+            <p class="benefits-hover">
               As a highly experienced developer, I have deep knowledge of
               programming and website development.
             </p>
@@ -439,7 +443,7 @@
               <use href="/return-js/assets/sprite-08705677.svg#icon-message"></use>
             </svg>
             <h3>Communication</h3>
-            <p>
+            <p class="benefits-hover">
               Understanding your needs and wants is my priority and I am always
               open to discussions and corrections.
             </p>
@@ -449,7 +453,7 @@
               <use href="/return-js/assets/sprite-08705677.svg#icon-brush"></use>
             </svg>
             <h3>Art</h3>
-            <p>
+            <p class="benefits-hover">
               Thanks to my creative nature, I am ready to accept challenges and
               help you bring your ideas to life.
             </p>
@@ -459,7 +463,7 @@
               <use href="/return-js/assets/sprite-08705677.svg#icon-hourglass"></use>
             </svg>
             <h3>Urgent execution</h3>
-            <p>
+            <p class="benefits-hover">
               I understand how important time is to you. Ready to work quickly
               and efficiently, without reducing the quality of work.
             </p>
@@ -467,11 +471,9 @@
         </ul>
       </div>
       <div class="btn-benefits">
-        <button class="order-btn-benefits" aria-label="Order the project">
-          <a class="benefits-btn-link" href="#work-together"
-            >Order the project</a
-          >
-        </button>
+        <a class="order-btn-benefits benefits-btn-link" href="#work-together"
+          >Order the project</a
+        >
       </div>
     </div>
   </div>
@@ -821,7 +823,7 @@
     <div class="content-covers">
       <ul class="marquee-inner">
         <li class="marquee">
-          <a class="marquee__line" target="_blank"
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -839,8 +841,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -858,8 +860,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -877,8 +879,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -896,10 +898,10 @@
                 width="282"
               />
             </picture>
-          </a>
+          </span>
         </li>
         <li class="marquee">
-          <a class="marquee__line" target="_blank"
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -917,8 +919,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -936,8 +938,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -955,8 +957,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -974,10 +976,10 @@
                 width="282"
               />
             </picture>
-          </a>
+          </span>
         </li>
         <li class="marquee">
-          <a class="marquee__line" target="_blank"
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -995,8 +997,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1014,8 +1016,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1033,8 +1035,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1052,10 +1054,10 @@
                 width="282"
               />
             </picture>
-          </a>
+          </span>
         </li>
         <li class="marquee">
-          <a class="marquee__line" target="_blank"
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1073,8 +1075,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1092,8 +1094,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1111,8 +1113,8 @@
                 width="282"
               />
             </picture>
-          </a>
-          <a class="marquee__line" target="_blank"
+          </span>
+          <span class="marquee__line"
             ><picture>
               <source
                 class="covers-image"
@@ -1130,7 +1132,7 @@
                 width="282"
               />
             </picture>
-          </a>
+          </span>
         </li>
       </ul>
     </div>
