@@ -12,7 +12,7 @@ new Accordion('.about-me-secondlist', {
   showMultiple: true,
 });
 
-const boboob = new Swiper('.swiper-about', {
+const about = new Swiper('.swiper-about', {
   autoplay: {
     delay: 2500,
   },
@@ -63,5 +63,3 @@ const boboob = new Swiper('.swiper-about', {
     },
   },
 });
-
-export { boboob };

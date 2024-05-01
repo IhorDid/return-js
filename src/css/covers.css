@@ -6,7 +6,7 @@
   display: none;
 }
 .content-covers {
-  background-image: url(./img/convers/back.png);
+  background-image: url(../img/convers/back.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -58,11 +58,12 @@
 
 .rotate-image {
   transform: rotateY(180deg);
-  transition: transform 0.5s ease;
+  transition: transform 2s ease;
 }
 
 .marquee__line:hover .covers-image {
   transform: rotateY(90deg);
+  transition: transform 3ms ease;
 }
 
 .english-wish {
@@ -70,20 +71,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #e0ab16;
-  font-size: 50px;
-  font-family: 'Inter Tight', sans-serif;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
+  padding: 10px 20px;
+  z-index: 1;
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  font-size: 40px;
+
+  box-shadow: 0 0 20px rgba(40, 185, 137, 0.5);
+  border-radius: 50px;
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  animation: fadeIn 3s ease forwards;
+
+  color: #2342f0;
+  text-shadow: 0 0 10px rgba(35, 66, 240, 0.8);
 }
 
 /* _ Tablet _ */
@@ -93,7 +94,7 @@
     padding: 48px 32px;
   }
   .content-covers {
-    background-image: url(./img/convers/back.png);
+    background-image: url(../img/convers/back.png);
     background-position: left;
   }
 
@@ -123,11 +124,15 @@
       transform: translateX(-50%);
     }
   }
+  .english-wish {
+    font-size: 90px;
+  }
 }
 /* _ Desktop _ */
 @media screen and (min-width: 1440px) {
   .covers-container {
     padding: 82px 0px;
+    width: 100%;
   }
   .content-covers {
     background-position: center;
@@ -153,5 +158,8 @@
     100% {
       transform: translateX(-20%);
     }
+  }
+  .english-wish {
+    font-size: 100px;
   }
 }

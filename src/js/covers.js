@@ -27,13 +27,13 @@ marqueeLines.forEach(line => {
     image.classList.add('rotate-image');
 
     const englishWish = document.createElement('div');
-    englishWish.textContent = 'Best wishes!';
+    englishWish.textContent = 'We are Legendary';
     englishWish.classList.add('english-wish');
 
     line.appendChild(englishWish);
 
     setTimeout(() => {
-      englishWish.style.animation = 'fadeIn 0.5s ease';
+      englishWish.style.animation = 'fadeIn 3.5s ease';
       englishWish.style.opacity = '1';
     }, 100);
   });

@@ -6,8 +6,6 @@
 .projects-title {
   margin-bottom: 32px;
 
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -41,21 +39,19 @@
   height: 46px;
   padding: 13px 18px 13px 18px;
 
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
   letter-spacing: -0.02em;
 
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   color: #1c1d20;
 }
+.projects-skill:hover {
+  text-shadow: 0 0 10px black;
+}
 
 .projects-info-wrapper h3 {
   margin: 94px auto 32px 0;
 
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.16667;
   letter-spacing: -0.03em;
@@ -69,9 +65,6 @@
   width: 141px;
   height: 45px;
 
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
   letter-spacing: -0.02em;
 
   color: #fafafa;
@@ -119,15 +112,16 @@
 
 .projects-prev-btn::before,
 .projects-next-btn::before {
-  content: '';
   position: absolute;
+  height: 100%;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  z-index: -1;
+
+  content: '';
   border-radius: 5px;
   background-color: transparent;
-  z-index: -1;
   transition: opacity 0.3s ease;
 }
 .projects-prev-btn:hover,
@@ -143,6 +137,7 @@
   width: 52px;
   height: 52px;
   padding: 14px;
+
   color: rgba(250, 250, 250, 0.2);
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
@@ -167,6 +162,8 @@
   width: 32px;
   height: 32px;
 }
+
+/* TABLET */
 @media screen and (min-width: 768px) {
   .projects-section {
     padding-top: 48px;
@@ -244,6 +241,12 @@
 
   .projects-info-wrapper h3 {
     margin: 223px auto 38px 0;
+
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #1c1d20;
   }
 
   .projects-img-wrapper {
