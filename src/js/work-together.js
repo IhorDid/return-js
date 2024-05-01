@@ -52,7 +52,7 @@ async function submitFooterForm(event) {
 `);
     instance.show();
     document.querySelector('body').classList.add('fix-scroll');
-    goTopBtn.classList.add('is-hidden');
+    elements.goTopBtn.classList.add('is-hidden');
     localStorage.removeItem(key);
     handleClosing(instance.close);
     event.target.reset();
@@ -75,12 +75,12 @@ function handleClosing(callback) {
     ) {
       callback();
       document.querySelector('body').classList.remove('fix-scroll');
-      goTopBtn.classList.remove('is-hidden');
+      elements.goTopBtn.classList.remove('is-hidden');
     }
     if (event.key === 'Escape') {
       callback();
       document.querySelector('body').classList.remove('fix-scroll');
-      goTopBtn.classList.remove('is-hidden');
+      elements.goTopBtn.classList.remove('is-hidden');
     }
   }
 }
@@ -103,7 +103,7 @@ function setPreviousValue() {
   const previousValues = JSON.parse(localStorage.getItem(key));
   const previousEmail = previousValues.userEmail;
   const previousMessage = previousValues.comments;
-  const { userEmail, comments } = footerForm.elements;
+  const { userEmail, comments } = elements.footerForm.elements;
 
   userEmail.value = previousEmail || '';
   comments.value = previousMessage || '';
